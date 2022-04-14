@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CoffeeShopC_I_S
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
