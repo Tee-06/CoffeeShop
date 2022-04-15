@@ -19,7 +19,8 @@ namespace CoffeeShopC_I_S
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            if (IsValidUser(usernameTB.Text, passwordTB.Text))
+            
+            if (IsValidUser(usernameTB.Text, passwordTB.Text, roleComboBox.Text.ToString()))
             {
                 this.Hide();
                 MenuForm menu = new MenuForm();
@@ -27,26 +28,28 @@ namespace CoffeeShopC_I_S
             }
             else
             {
-                MessageBox.Show("Username or Password is incorrect please try again");
+                MessageBox.Show("Username, Password, or Role is Incorrect is incorrect please try again");
             }
         }
-        private bool IsValidUser(string Username, string Password)
+        private bool IsValidUser(string Username, string Password, string Role)
         {
             
                 UsersDataContext usersdb = new UsersDataContext();
+            
+                
 
-                var user = from s in usersdb.UsersTables
-                           where s.Username == usernameTB.Text && s.Password == passwordTB.Text
+            var user = from s in usersdb.UsersTables
+                       where s.Username == usernameTB.Text && s.Password == passwordTB.Text && s.Role == roleComboBox.Text.ToString()
                            select s;
                 if (user.Any())
                 {
                     return true;
                     //this.Hide();
                     //MenuForm menu = new MenuForm();
-                    //menu.Show();
-                }
+                   //menu.Show();
+               }
                 else
-                {
+               {
                 return false;
                 }
         }
@@ -54,6 +57,13 @@ namespace CoffeeShopC_I_S
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'coffeeShopdbDataSet.UsersTable' table. You can move, or remove it, as needed.
+            this.usersTableTableAdapter.Fill(this.coffeeShopdbDataSet.UsersTable);
+
         }
     }
 }

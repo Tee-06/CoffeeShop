@@ -29,6 +29,7 @@ namespace CoffeeShopC_I_S
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.signInBtn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -48,6 +49,14 @@ namespace CoffeeShopC_I_S
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.exitBtnLf = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.roleComboBox = new System.Windows.Forms.ComboBox();
+            this.coffeeShopdbDataSet = new CoffeeShopC_I_S.CoffeeShopdbDataSet();
+            this.usersTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableTableAdapter = new CoffeeShopC_I_S.CoffeeShopdbDataSetTableAdapters.UsersTableTableAdapter();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -55,11 +64,15 @@ namespace CoffeeShopC_I_S
             this.panel3.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.signInBtn);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel5);
@@ -74,7 +87,7 @@ namespace CoffeeShopC_I_S
             // 
             this.signInBtn.BackColor = System.Drawing.Color.Chocolate;
             this.signInBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInBtn.Location = new System.Drawing.Point(36, 333);
+            this.signInBtn.Location = new System.Drawing.Point(36, 386);
             this.signInBtn.Name = "signInBtn";
             this.signInBtn.Size = new System.Drawing.Size(309, 61);
             this.signInBtn.TabIndex = 4;
@@ -241,6 +254,67 @@ namespace CoffeeShopC_I_S
             this.exitBtnLf.UseVisualStyleBackColor = false;
             this.exitBtnLf.Click += new System.EventHandler(this.exitBtnLf_Click);
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel15.Controls.Add(this.roleComboBox);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Controls.Add(this.panel17);
+            this.panel15.Controls.Add(this.panel18);
+            this.panel15.Location = new System.Drawing.Point(36, 311);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(309, 69);
+            this.panel15.TabIndex = 5;
+            // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel16.Location = new System.Drawing.Point(308, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1, 68);
+            this.panel16.TabIndex = 2;
+            // 
+            // panel17
+            // 
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1, 68);
+            this.panel17.TabIndex = 1;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel18.Location = new System.Drawing.Point(0, 68);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(309, 1);
+            this.panel18.TabIndex = 0;
+            // 
+            // roleComboBox
+            // 
+            this.roleComboBox.DataSource = this.usersTableBindingSource;
+            this.roleComboBox.DisplayMember = "Role";
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.Location = new System.Drawing.Point(22, 26);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(266, 21);
+            this.roleComboBox.TabIndex = 3;
+            // 
+            // coffeeShopdbDataSet
+            // 
+            this.coffeeShopdbDataSet.DataSetName = "CoffeeShopdbDataSet";
+            this.coffeeShopdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableBindingSource
+            // 
+            this.usersTableBindingSource.DataMember = "UsersTable";
+            this.usersTableBindingSource.DataSource = this.coffeeShopdbDataSet;
+            // 
+            // usersTableTableAdapter
+            // 
+            this.usersTableTableAdapter.ClearBeforeFill = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +327,7 @@ namespace CoffeeShopC_I_S
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Text = "Welcome Please Log In";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -263,6 +338,9 @@ namespace CoffeeShopC_I_S
             this.panel3.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeShopdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,6 +366,14 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button exitBtnLf;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.ComboBox roleComboBox;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private CoffeeShopdbDataSet coffeeShopdbDataSet;
+        private System.Windows.Forms.BindingSource usersTableBindingSource;
+        private CoffeeShopdbDataSetTableAdapters.UsersTableTableAdapter usersTableTableAdapter;
     }
 }
 
