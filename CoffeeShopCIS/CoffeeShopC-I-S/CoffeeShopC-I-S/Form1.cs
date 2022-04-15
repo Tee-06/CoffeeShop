@@ -59,7 +59,7 @@ namespace CoffeeShopC_I_S
                     //! if this causes an issue for you when viewing, either install the extention and then restart visual studio, or remove whatever is after the initial //
                     //xthis.Hide();
                     //xMenuForm menu = new MenuForm();
-                   //xmenu.Show()
+                   //xmenu.Show();
                }
                 else
                {
