@@ -50,5 +50,10 @@ namespace CoffeeShopC_I_S
                 return false;
                 }
         }
+
+        private void exitBtnLf_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

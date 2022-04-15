@@ -47,12 +47,14 @@ namespace CoffeeShopC_I_S
             this.usernameTB = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.exitBtnLf = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -221,10 +223,23 @@ namespace CoffeeShopC_I_S
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.exitBtnLf);
             this.panel14.Location = new System.Drawing.Point(0, 54);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(398, 46);
             this.panel14.TabIndex = 1;
+            // 
+            // exitBtnLf
+            // 
+            this.exitBtnLf.BackColor = System.Drawing.Color.Chocolate;
+            this.exitBtnLf.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtnLf.Location = new System.Drawing.Point(277, 0);
+            this.exitBtnLf.Name = "exitBtnLf";
+            this.exitBtnLf.Size = new System.Drawing.Size(121, 43);
+            this.exitBtnLf.TabIndex = 6;
+            this.exitBtnLf.Text = "Exit";
+            this.exitBtnLf.UseVisualStyleBackColor = false;
+            this.exitBtnLf.Click += new System.EventHandler(this.exitBtnLf_Click);
             // 
             // LoginForm
             // 
@@ -247,6 +262,7 @@ namespace CoffeeShopC_I_S
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,6 +287,7 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.TextBox usernameTB;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button exitBtnLf;
     }
 }
 
