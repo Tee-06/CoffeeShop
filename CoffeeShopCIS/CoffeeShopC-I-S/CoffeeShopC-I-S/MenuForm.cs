@@ -12,7 +12,8 @@ namespace CoffeeShopC_I_S
 {
     public partial class MenuForm : Form
     {
-        
+        UsersDataContext productBD = new UsersDataContext();
+        OpenFileDialog open = new OpenFileDialog();
         public MenuForm()
         {
             InitializeComponent();
@@ -20,7 +21,10 @@ namespace CoffeeShopC_I_S
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-            
+            foreach (Product product in productBD.Products)
+            {
+                orderLB.Items.Add(product.ProductName);
+            }
         }
 
         private void exitBtnLf_Click(object sender, EventArgs e)
@@ -44,9 +48,12 @@ namespace CoffeeShopC_I_S
 
         private void mochaBtn_Click(object sender, EventArgs e)
         {
-            UsersDataContext productBD = new UsersDataContext();
-         
-            //foreach (Song song in songsDB.Songs)
+            foreach (Product product in productBD.Products);
+            {
+                
+                //orderLB.Items.Add();
+                
+            }
         }
     }
 }
