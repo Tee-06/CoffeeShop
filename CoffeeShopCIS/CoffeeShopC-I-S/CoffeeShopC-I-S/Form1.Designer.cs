@@ -43,8 +43,8 @@ namespace CoffeeShopC_I_S
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.signInLbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTB = new System.Windows.Forms.TextBox();
+            this.usernameTB = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -78,11 +78,12 @@ namespace CoffeeShopC_I_S
             this.signInBtn.TabIndex = 4;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel9.Controls.Add(this.textBox2);
+            this.panel9.Controls.Add(this.passwordTB);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel12);
@@ -119,7 +120,7 @@ namespace CoffeeShopC_I_S
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.usernameTB);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
@@ -188,26 +189,26 @@ namespace CoffeeShopC_I_S
             this.signInLbl.TabIndex = 0;
             this.signInLbl.Text = "Sign In";
             // 
-            // textBox2
+            // passwordTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(19, 15);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 38);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Password";
+            this.passwordTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTB.Location = new System.Drawing.Point(19, 15);
+            this.passwordTB.Multiline = true;
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(270, 38);
+            this.passwordTB.TabIndex = 4;
+            this.passwordTB.Text = "Password";
             // 
-            // textBox1
+            // usernameTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox1.Location = new System.Drawing.Point(19, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 38);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Username";
+            this.usernameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTB.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.usernameTB.Location = new System.Drawing.Point(19, 19);
+            this.usernameTB.Multiline = true;
+            this.usernameTB.Name = "usernameTB";
+            this.usernameTB.Size = new System.Drawing.Size(270, 38);
+            this.usernameTB.TabIndex = 5;
+            this.usernameTB.Text = "Username";
             // 
             // panel13
             // 
@@ -266,8 +267,8 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordTB;
+        private System.Windows.Forms.TextBox usernameTB;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
     }

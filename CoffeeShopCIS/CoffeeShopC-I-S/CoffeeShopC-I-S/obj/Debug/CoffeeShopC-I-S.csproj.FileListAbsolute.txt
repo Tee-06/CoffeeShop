@@ -1,0 +1,13 @@
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\bin\Debug\CoffeeShopdb.mdf
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\bin\Debug\CoffeeShopdb_log.ldf
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\bin\Debug\CoffeeShopC-I-S.exe.config
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\bin\Debug\CoffeeShopC-I-S.exe
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\bin\Debug\CoffeeShopC-I-S.pdb
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC-I-S.csprojAssemblyReference.cache
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.LoginForm.resources
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.Properties.Resources.resources
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC-I-S.csproj.GenerateResource.cache
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC-I-S.csproj.CoreCompileInputs.cache
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC-I-S.exe
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC-I-S.pdb
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.MenuForm.resources
