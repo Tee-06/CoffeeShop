@@ -21,5 +21,13 @@ namespace CoffeeShopC_I_S
         {
             
         }
+
+        private void exitBtnLf_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Close();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace CoffeeShopC_I_S
             {
                 this.Hide();
                 MenuForm menu = new MenuForm();
-                menu.Show();
+                menu.ShowDialog();
             }
             else
             {
@@ -36,7 +36,7 @@ namespace CoffeeShopC_I_S
             
                 UsersDataContext usersdb = new UsersDataContext();
             
-                
+                //! For some reason the combo box needs to be .Text instead of selectedvalue but it works.
 
             var user = from s in usersdb.UsersTables
                        where s.Username == usernameTB.Text && s.Password == passwordTB.Text && s.Role == roleComboBox.Text.ToString()
@@ -44,15 +44,19 @@ namespace CoffeeShopC_I_S
                 if (user.Any())
                 {
                     return true;
-                    //this.Hide();
-                    //MenuForm menu = new MenuForm();
-                   //menu.Show();
+                    
+                    //! I have an extention called better comments, this is just better for me for organization -Tyler
+                    //! if this causes an issue for you when viewing, either install the extention and then restart visual studio, or remove whatever is after the initial //
+                    //xthis.Hide();
+                    //xMenuForm menu = new MenuForm();
+                   //xmenu.Show();
                }
                 else
                {
                 return false;
                 }
         }
+
 
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
@@ -63,6 +67,9 @@ namespace CoffeeShopC_I_S
         {
             // TODO: This line of code loads data into the 'coffeeShopdbDataSet.UsersTable' table. You can move, or remove it, as needed.
             this.usersTableTableAdapter.Fill(this.coffeeShopdbDataSet.UsersTable);
+
+            usernameTB.Text = "Username";
+            passwordTB.Text = "Password";
 
         }
     }
