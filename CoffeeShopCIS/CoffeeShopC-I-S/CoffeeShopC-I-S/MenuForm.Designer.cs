@@ -134,6 +134,7 @@ namespace CoffeeShopC_I_S
             this.mochaBtn.TabIndex = 13;
             this.mochaBtn.Text = "Mocha";
             this.mochaBtn.UseVisualStyleBackColor = false;
+            this.mochaBtn.Click += new System.EventHandler(this.mochaBtn_Click);
             // 
             // espressoBtn
             // 

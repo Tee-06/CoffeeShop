@@ -12,6 +12,7 @@ namespace CoffeeShopC_I_S
 {
     public partial class MenuForm : Form
     {
+        
         public MenuForm()
         {
             InitializeComponent();
@@ -39,6 +40,13 @@ namespace CoffeeShopC_I_S
                     orderLB.Items.Add(product.ProductName);
                 }
             }
+        }
+
+        private void mochaBtn_Click(object sender, EventArgs e)
+        {
+            UsersDataContext productBD = new UsersDataContext();
+         
+            //foreach (Song song in songsDB.Songs)
         }
     }
 }
