@@ -170,9 +170,10 @@ namespace CoffeeShopC_I_S
             this.passwordTB.Location = new System.Drawing.Point(19, 15);
             this.passwordTB.Multiline = true;
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.PasswordChar = '*';
             this.passwordTB.Size = new System.Drawing.Size(270, 38);
             this.passwordTB.TabIndex = 4;
+            this.passwordTB.Enter += new System.EventHandler(this.passwordTB_Enter);
+            this.passwordTB.Leave += new System.EventHandler(this.passwordTB_Leave);
             // 
             // panel10
             // 
@@ -220,6 +221,8 @@ namespace CoffeeShopC_I_S
             this.usernameTB.Name = "usernameTB";
             this.usernameTB.Size = new System.Drawing.Size(270, 38);
             this.usernameTB.TabIndex = 5;
+            this.usernameTB.Enter += new System.EventHandler(this.usernameTB_Enter);
+            this.usernameTB.Leave += new System.EventHandler(this.usernameTB_Leave);
             // 
             // panel8
             // 
@@ -301,10 +304,11 @@ namespace CoffeeShopC_I_S
             // exitBtnLf
             // 
             this.exitBtnLf.BackColor = System.Drawing.Color.Chocolate;
+            this.exitBtnLf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtnLf.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtnLf.Location = new System.Drawing.Point(277, 0);
             this.exitBtnLf.Name = "exitBtnLf";
-            this.exitBtnLf.Size = new System.Drawing.Size(121, 43);
+            this.exitBtnLf.Size = new System.Drawing.Size(121, 46);
             this.exitBtnLf.TabIndex = 6;
             this.exitBtnLf.Text = "Exit";
             this.exitBtnLf.UseVisualStyleBackColor = false;

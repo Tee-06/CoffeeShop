@@ -29,5 +29,16 @@ namespace CoffeeShopC_I_S
             login.Show();
             this.Close();
         }
+
+        private void latteBtn_Click(object sender, EventArgs e)
+        {
+            UsersDataContext usersdb = new UsersDataContext();
+            foreach (Product product in usersdb.Products)
+            {
+                {
+                    orderLB.Items.Add(product.ProductName);
+                }
+            }
+        }
     }
 }
