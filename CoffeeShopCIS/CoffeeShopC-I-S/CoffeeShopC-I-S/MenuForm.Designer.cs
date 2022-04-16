@@ -179,7 +179,6 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.TabIndex = 19;
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
-            this.ownerMenuBtn.Click += new System.EventHandler(this.ownerMenuBtn_Click);
             // 
             // removeBtn
             // 
