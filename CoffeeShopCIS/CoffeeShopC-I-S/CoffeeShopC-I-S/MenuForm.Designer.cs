@@ -31,15 +31,18 @@ namespace CoffeeShopC_I_S
         {
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
+            this.priceLB = new System.Windows.Forms.ListBox();
+            this.menuLbl = new System.Windows.Forms.Label();
+            this.menuLB = new System.Windows.Forms.ListBox();
             this.completeOrderBtn = new System.Windows.Forms.Button();
             this.orderListLbl = new System.Windows.Forms.Label();
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
-            this.menuLbl = new System.Windows.Forms.Label();
-            this.menuLB = new System.Windows.Forms.ListBox();
-            this.priceLB = new System.Windows.Forms.ListBox();
+            this.qtyControl = new System.Windows.Forms.NumericUpDown();
+            this.addToOrderBtn = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).BeginInit();
             this.SuspendLayout();
             // 
             // exitBtnLf
@@ -58,6 +61,8 @@ namespace CoffeeShopC_I_S
             // menuHoldingPanel
             // 
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuHoldingPanel.Controls.Add(this.addToOrderBtn);
+            this.menuHoldingPanel.Controls.Add(this.qtyControl);
             this.menuHoldingPanel.Controls.Add(this.priceLB);
             this.menuHoldingPanel.Controls.Add(this.menuLbl);
             this.menuHoldingPanel.Controls.Add(this.menuLB);
@@ -68,6 +73,37 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.Name = "menuHoldingPanel";
             this.menuHoldingPanel.Size = new System.Drawing.Size(511, 442);
             this.menuHoldingPanel.TabIndex = 8;
+            // 
+            // priceLB
+            // 
+            this.priceLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLB.FormattingEnabled = true;
+            this.priceLB.ItemHeight = 16;
+            this.priceLB.Location = new System.Drawing.Point(170, 41);
+            this.priceLB.Name = "priceLB";
+            this.priceLB.Size = new System.Drawing.Size(58, 212);
+            this.priceLB.TabIndex = 20;
+            // 
+            // menuLbl
+            // 
+            this.menuLbl.AutoSize = true;
+            this.menuLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLbl.Location = new System.Drawing.Point(8, 4);
+            this.menuLbl.Name = "menuLbl";
+            this.menuLbl.Size = new System.Drawing.Size(152, 34);
+            this.menuLbl.TabIndex = 19;
+            this.menuLbl.Text = "Menu List";
+            // 
+            // menuLB
+            // 
+            this.menuLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLB.FormattingEnabled = true;
+            this.menuLB.ItemHeight = 16;
+            this.menuLB.Location = new System.Drawing.Point(14, 41);
+            this.menuLB.Name = "menuLB";
+            this.menuLB.Size = new System.Drawing.Size(150, 212);
+            this.menuLB.TabIndex = 18;
+            this.menuLB.SelectedIndexChanged += new System.EventHandler(this.menuLB_SelectedIndexChanged);
             // 
             // completeOrderBtn
             // 
@@ -123,36 +159,24 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
             // 
-            // menuLbl
+            // qtyControl
             // 
-            this.menuLbl.AutoSize = true;
-            this.menuLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuLbl.Location = new System.Drawing.Point(8, 4);
-            this.menuLbl.Name = "menuLbl";
-            this.menuLbl.Size = new System.Drawing.Size(152, 34);
-            this.menuLbl.TabIndex = 19;
-            this.menuLbl.Text = "Menu List";
+            this.qtyControl.Location = new System.Drawing.Point(14, 260);
+            this.qtyControl.Name = "qtyControl";
+            this.qtyControl.Size = new System.Drawing.Size(120, 20);
+            this.qtyControl.TabIndex = 21;
             // 
-            // menuLB
+            // addToOrderBtn
             // 
-            this.menuLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuLB.FormattingEnabled = true;
-            this.menuLB.ItemHeight = 16;
-            this.menuLB.Location = new System.Drawing.Point(14, 41);
-            this.menuLB.Name = "menuLB";
-            this.menuLB.Size = new System.Drawing.Size(150, 212);
-            this.menuLB.TabIndex = 18;
-            this.menuLB.SelectedIndexChanged += new System.EventHandler(this.menuLB_SelectedIndexChanged);
-            // 
-            // priceLB
-            // 
-            this.priceLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLB.FormattingEnabled = true;
-            this.priceLB.ItemHeight = 16;
-            this.priceLB.Location = new System.Drawing.Point(170, 41);
-            this.priceLB.Name = "priceLB";
-            this.priceLB.Size = new System.Drawing.Size(58, 212);
-            this.priceLB.TabIndex = 20;
+            this.addToOrderBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.addToOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addToOrderBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToOrderBtn.Location = new System.Drawing.Point(14, 305);
+            this.addToOrderBtn.Name = "addToOrderBtn";
+            this.addToOrderBtn.Size = new System.Drawing.Size(108, 43);
+            this.addToOrderBtn.TabIndex = 22;
+            this.addToOrderBtn.Text = "Add";
+            this.addToOrderBtn.UseVisualStyleBackColor = false;
             // 
             // MenuForm
             // 
@@ -170,6 +194,7 @@ namespace CoffeeShopC_I_S
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuHoldingPanel.ResumeLayout(false);
             this.menuHoldingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +211,7 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Label menuLbl;
         private System.Windows.Forms.ListBox menuLB;
         private System.Windows.Forms.ListBox priceLB;
+        private System.Windows.Forms.Button addToOrderBtn;
+        private System.Windows.Forms.NumericUpDown qtyControl;
     }
 }
