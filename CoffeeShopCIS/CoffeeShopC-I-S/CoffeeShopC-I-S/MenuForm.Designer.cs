@@ -32,16 +32,13 @@ namespace CoffeeShopC_I_S
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
             this.completeOrderBtn = new System.Windows.Forms.Button();
-            this.blackCoffBtn = new System.Windows.Forms.Button();
-            this.cappuccinoBtn = new System.Windows.Forms.Button();
-            this.americanoBtn = new System.Windows.Forms.Button();
-            this.mochaBtn = new System.Windows.Forms.Button();
-            this.espressoBtn = new System.Windows.Forms.Button();
-            this.latteBtn = new System.Windows.Forms.Button();
             this.orderListLbl = new System.Windows.Forms.Label();
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
+            this.menuLbl = new System.Windows.Forms.Label();
+            this.menuLB = new System.Windows.Forms.ListBox();
+            this.priceLB = new System.Windows.Forms.ListBox();
             this.menuHoldingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,13 +58,10 @@ namespace CoffeeShopC_I_S
             // menuHoldingPanel
             // 
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuHoldingPanel.Controls.Add(this.priceLB);
+            this.menuHoldingPanel.Controls.Add(this.menuLbl);
+            this.menuHoldingPanel.Controls.Add(this.menuLB);
             this.menuHoldingPanel.Controls.Add(this.completeOrderBtn);
-            this.menuHoldingPanel.Controls.Add(this.blackCoffBtn);
-            this.menuHoldingPanel.Controls.Add(this.cappuccinoBtn);
-            this.menuHoldingPanel.Controls.Add(this.americanoBtn);
-            this.menuHoldingPanel.Controls.Add(this.mochaBtn);
-            this.menuHoldingPanel.Controls.Add(this.espressoBtn);
-            this.menuHoldingPanel.Controls.Add(this.latteBtn);
             this.menuHoldingPanel.Controls.Add(this.orderListLbl);
             this.menuHoldingPanel.Controls.Add(this.orderLB);
             this.menuHoldingPanel.Location = new System.Drawing.Point(373, 16);
@@ -86,80 +80,6 @@ namespace CoffeeShopC_I_S
             this.completeOrderBtn.TabIndex = 17;
             this.completeOrderBtn.Text = "Complete Order";
             this.completeOrderBtn.UseVisualStyleBackColor = false;
-            // 
-            // blackCoffBtn
-            // 
-            this.blackCoffBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.blackCoffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.blackCoffBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackCoffBtn.Location = new System.Drawing.Point(3, 100);
-            this.blackCoffBtn.Name = "blackCoffBtn";
-            this.blackCoffBtn.Size = new System.Drawing.Size(141, 43);
-            this.blackCoffBtn.TabIndex = 16;
-            this.blackCoffBtn.Text = "Black";
-            this.blackCoffBtn.UseVisualStyleBackColor = false;
-            // 
-            // cappuccinoBtn
-            // 
-            this.cappuccinoBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.cappuccinoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cappuccinoBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cappuccinoBtn.Location = new System.Drawing.Point(150, 163);
-            this.cappuccinoBtn.Name = "cappuccinoBtn";
-            this.cappuccinoBtn.Size = new System.Drawing.Size(183, 43);
-            this.cappuccinoBtn.TabIndex = 15;
-            this.cappuccinoBtn.Text = "Cappuccino";
-            this.cappuccinoBtn.UseVisualStyleBackColor = false;
-            // 
-            // americanoBtn
-            // 
-            this.americanoBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.americanoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.americanoBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.americanoBtn.Location = new System.Drawing.Point(3, 163);
-            this.americanoBtn.Name = "americanoBtn";
-            this.americanoBtn.Size = new System.Drawing.Size(141, 43);
-            this.americanoBtn.TabIndex = 14;
-            this.americanoBtn.Text = "Americano";
-            this.americanoBtn.UseVisualStyleBackColor = false;
-            // 
-            // mochaBtn
-            // 
-            this.mochaBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.mochaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mochaBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mochaBtn.Location = new System.Drawing.Point(150, 41);
-            this.mochaBtn.Name = "mochaBtn";
-            this.mochaBtn.Size = new System.Drawing.Size(141, 43);
-            this.mochaBtn.TabIndex = 13;
-            this.mochaBtn.Text = "Mocha";
-            this.mochaBtn.UseVisualStyleBackColor = false;
-            this.mochaBtn.Click += new System.EventHandler(this.mochaBtn_Click);
-            // 
-            // espressoBtn
-            // 
-            this.espressoBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.espressoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.espressoBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.espressoBtn.Location = new System.Drawing.Point(150, 100);
-            this.espressoBtn.Name = "espressoBtn";
-            this.espressoBtn.Size = new System.Drawing.Size(153, 43);
-            this.espressoBtn.TabIndex = 12;
-            this.espressoBtn.Text = "Espresso";
-            this.espressoBtn.UseVisualStyleBackColor = false;
-            // 
-            // latteBtn
-            // 
-            this.latteBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.latteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.latteBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.latteBtn.Location = new System.Drawing.Point(3, 41);
-            this.latteBtn.Name = "latteBtn";
-            this.latteBtn.Size = new System.Drawing.Size(141, 43);
-            this.latteBtn.TabIndex = 11;
-            this.latteBtn.Text = "Latte";
-            this.latteBtn.UseVisualStyleBackColor = false;
-            this.latteBtn.Click += new System.EventHandler(this.latteBtn_Click);
             // 
             // orderListLbl
             // 
@@ -203,6 +123,37 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
             // 
+            // menuLbl
+            // 
+            this.menuLbl.AutoSize = true;
+            this.menuLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLbl.Location = new System.Drawing.Point(8, 4);
+            this.menuLbl.Name = "menuLbl";
+            this.menuLbl.Size = new System.Drawing.Size(152, 34);
+            this.menuLbl.TabIndex = 19;
+            this.menuLbl.Text = "Menu List";
+            // 
+            // menuLB
+            // 
+            this.menuLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLB.FormattingEnabled = true;
+            this.menuLB.ItemHeight = 16;
+            this.menuLB.Location = new System.Drawing.Point(14, 41);
+            this.menuLB.Name = "menuLB";
+            this.menuLB.Size = new System.Drawing.Size(150, 212);
+            this.menuLB.TabIndex = 18;
+            this.menuLB.SelectedIndexChanged += new System.EventHandler(this.menuLB_SelectedIndexChanged);
+            // 
+            // priceLB
+            // 
+            this.priceLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLB.FormattingEnabled = true;
+            this.priceLB.ItemHeight = 16;
+            this.priceLB.Location = new System.Drawing.Point(170, 41);
+            this.priceLB.Name = "priceLB";
+            this.priceLB.Size = new System.Drawing.Size(58, 212);
+            this.priceLB.TabIndex = 20;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,13 +181,10 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.ListBox orderLB;
         private System.Windows.Forms.Label orderListLbl;
         private System.Windows.Forms.Button completeOrderBtn;
-        private System.Windows.Forms.Button blackCoffBtn;
-        private System.Windows.Forms.Button cappuccinoBtn;
-        private System.Windows.Forms.Button americanoBtn;
-        private System.Windows.Forms.Button mochaBtn;
-        private System.Windows.Forms.Button espressoBtn;
-        private System.Windows.Forms.Button latteBtn;
         private System.Windows.Forms.Button pastOrdersBtn;
         private System.Windows.Forms.Button ownerMenuBtn;
+        private System.Windows.Forms.Label menuLbl;
+        private System.Windows.Forms.ListBox menuLB;
+        private System.Windows.Forms.ListBox priceLB;
     }
 }

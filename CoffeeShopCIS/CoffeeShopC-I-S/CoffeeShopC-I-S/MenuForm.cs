@@ -23,8 +23,10 @@ namespace CoffeeShopC_I_S
         {
             foreach (Product product in productBD.Products)
             {
-                orderLB.Items.Add(product.ProductName);
+                menuLB.Items.Add(product.ProductName);
+                priceLB.Items.Add(product.ProductPrice);
             }
+            
         }
 
         private void exitBtnLf_Click(object sender, EventArgs e)
@@ -54,6 +56,11 @@ namespace CoffeeShopC_I_S
                 //orderLB.Items.Add();
                 
             }
+        }
+
+        private void menuLB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
