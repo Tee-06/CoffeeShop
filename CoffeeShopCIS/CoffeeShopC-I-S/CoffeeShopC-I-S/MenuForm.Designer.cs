@@ -41,6 +41,7 @@ namespace CoffeeShopC_I_S
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
+            this.removeBtn = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace CoffeeShopC_I_S
             // menuHoldingPanel
             // 
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuHoldingPanel.Controls.Add(this.removeBtn);
             this.menuHoldingPanel.Controls.Add(this.addToOrderBtn);
             this.menuHoldingPanel.Controls.Add(this.qtyControl);
             this.menuHoldingPanel.Controls.Add(this.priceLB);
@@ -178,6 +180,19 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
             // 
+            // removeBtn
+            // 
+            this.removeBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.removeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeBtn.Location = new System.Drawing.Point(128, 305);
+            this.removeBtn.Name = "removeBtn";
+            this.removeBtn.Size = new System.Drawing.Size(139, 43);
+            this.removeBtn.TabIndex = 23;
+            this.removeBtn.Text = "Remove";
+            this.removeBtn.UseVisualStyleBackColor = false;
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,5 +228,6 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.ListBox priceLB;
         private System.Windows.Forms.Button addToOrderBtn;
         private System.Windows.Forms.NumericUpDown qtyControl;
+        private System.Windows.Forms.Button removeBtn;
     }
 }

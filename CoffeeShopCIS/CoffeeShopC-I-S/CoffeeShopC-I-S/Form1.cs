@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //Auth: Tyler Petersen
 //Desc: Coffee Shop App
-// UsersTable Database made by Tyler Petersen
+// UsersTable Database, and products made by Tyler Petersen
 //Date:4/14/22
 
 namespace CoffeeShopC_I_S
