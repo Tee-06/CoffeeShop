@@ -22,6 +22,7 @@ namespace CoffeeShopC_I_S
             InitializeComponent();
         }
 
+        //! -Tyler\/\/\/ 
         //! on load all items in products db get added to the menu list box 
         // ! also on load the currency gets formatted in the price list box to be only 2 decimals and have the $ in front.
         private void MenuForm_Load(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace CoffeeShopC_I_S
 
         }
 
+        // Closes -Tyler
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,23 +43,40 @@ namespace CoffeeShopC_I_S
 
         // ! on the add order button click, the selected item in the menu list box gets added to the order listbox
         // todo: Add in the Qty picker and the price into a seperate textbox, or label for the overall price of the order.
+        //! Add to orderLB, adds the menu selected item to the order LB - Tyler
         private void addToOrderBtn_Click(object sender, EventArgs e)
         {
+            
             foreach (Product product in productdb.Products)
             {
                 if (menuLB.SelectedItem.ToString() == product.ProductName)
                 {
                     orderLB.Items.Add(menuLB.SelectedItem.ToString());
                 }
+
             }
-            //for (int i = 0; i < 1; i++)
-            //{
-            //    orderLB.Items.Add(menuLB.SelectedItem.ToString()+ );
-            //}
+            //-Tyler \/\/\/
+            //! This loops through the orderlb and then looks through database to find the price, once price is found it adds it to the total.
+            //! does that until there are no more items left to loop through.
+            decimal totalPrice = 0;
+            foreach (string str in orderLB.Items)
+            {
+                foreach (Product product in productdb.Products)
+                {
+                    if (product.ProductName == str)
+                    {
+                        totalPrice += product.ProductPrice;
+                    }
+                }
+                //totalTB.Text = Math.Round(totalPrice, 2).ToString();
+                totalTB.Text = Math.Round(totalPrice, 2).ToString(); totalPrice.ToString();
+            }
+
         }
 
         private void removeBtn_Click(object sender, EventArgs e)
         {
+            //! Remove button, works if something is selected, but if nothing is selected it will throw an error, in the .exe that might be different idk yet tho -
             foreach (Product product in productdb.Products)
             {
                 if (menuLB.SelectedItem.ToString() == product.ProductName)
@@ -69,6 +88,22 @@ namespace CoffeeShopC_I_S
                 {
                     MessageBox.Show("Please Select An Item To Remove.");
                 }
+            }
+            //\/\/\/
+            //! This loops through the orderlb and then looks through database to find the price, once price is found it removes it to the total.
+            //! does that until there are no more items left to loop through.
+            decimal totalPrice = 0;
+            foreach (string str in orderLB.Items)
+            {
+                foreach (Product product in productdb.Products)
+                {
+                    if (product.ProductName == str)
+                    {
+                        totalPrice += product.ProductPrice;
+                    }
+                }
+                //totalTB.Text = Math.Round(totalPrice, 2).ToString();
+                totalTB.Text = Math.Round(totalPrice, 2).ToString(); totalPrice.ToString();
             }
         }
 
@@ -87,6 +122,7 @@ namespace CoffeeShopC_I_S
             //refreshes the listboxes with that information in the database -Logan
             menuLB.Items.Clear();
             priceLB.Items.Clear();
+            //! for each product in product in database, on refresh it will fetch the products again and add them to correspoding LB's, will also round the price to nearest 2 decimal places -Tyler 
             foreach (Product product in productdb.Products)
             {
                 menuLB.Items.Add(product.ProductName);

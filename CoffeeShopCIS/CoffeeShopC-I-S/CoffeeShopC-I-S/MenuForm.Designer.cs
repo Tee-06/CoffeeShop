@@ -31,6 +31,8 @@ namespace CoffeeShopC_I_S
         {
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
+            this.totalLbl = new System.Windows.Forms.Label();
+            this.totalTB = new System.Windows.Forms.TextBox();
             this.removeBtn = new System.Windows.Forms.Button();
             this.addToOrderBtn = new System.Windows.Forms.Button();
             this.priceLB = new System.Windows.Forms.ListBox();
@@ -61,6 +63,8 @@ namespace CoffeeShopC_I_S
             // menuHoldingPanel
             // 
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuHoldingPanel.Controls.Add(this.totalLbl);
+            this.menuHoldingPanel.Controls.Add(this.totalTB);
             this.menuHoldingPanel.Controls.Add(this.removeBtn);
             this.menuHoldingPanel.Controls.Add(this.addToOrderBtn);
             this.menuHoldingPanel.Controls.Add(this.priceLB);
@@ -73,6 +77,27 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.Name = "menuHoldingPanel";
             this.menuHoldingPanel.Size = new System.Drawing.Size(511, 442);
             this.menuHoldingPanel.TabIndex = 8;
+            // 
+            // totalLbl
+            // 
+            this.totalLbl.AutoSize = true;
+            this.totalLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLbl.Location = new System.Drawing.Point(253, 268);
+            this.totalLbl.Name = "totalLbl";
+            this.totalLbl.Size = new System.Drawing.Size(93, 34);
+            this.totalLbl.TabIndex = 25;
+            this.totalLbl.Text = "Total:";
+            // 
+            // totalTB
+            // 
+            this.totalTB.BackColor = System.Drawing.Color.Black;
+            this.totalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTB.ForeColor = System.Drawing.Color.Chocolate;
+            this.totalTB.Location = new System.Drawing.Point(348, 268);
+            this.totalTB.Multiline = true;
+            this.totalTB.Name = "totalTB";
+            this.totalTB.Size = new System.Drawing.Size(150, 65);
+            this.totalTB.TabIndex = 24;
             // 
             // removeBtn
             // 
@@ -235,5 +260,7 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Button addToOrderBtn;
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Label totalLbl;
+        private System.Windows.Forms.TextBox totalTB;
     }
 }
