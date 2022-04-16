@@ -85,5 +85,10 @@ namespace CoffeeShopC_I_S
                 priceLB.Items.Add("$" + Math.Round(product.ProductPrice, 2).ToString());
             }
         }
+
+        private void completeOrderBtn_Click(object sender, EventArgs e)
+        {
+            //todo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
+        }
     }
 }

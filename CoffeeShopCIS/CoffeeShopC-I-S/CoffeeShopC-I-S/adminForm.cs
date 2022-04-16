@@ -33,10 +33,15 @@ namespace CoffeeShopC_I_S
             this.productsTableAdapter.Fill(this.coffeeShopdbDataSet1.Products);
 
         }
+        //! For Logan To Do:
+        //todo: Add remove on click event for database.
+        //todo: delete add button and just use save button for adding to database
+        //todo: Also delete top navigation bar for a more cleaner look.
+       //todo: Check Receipt Form.cs *Code*
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
+            //todo: Add or make function for saving to the database, and not the instance so on re load of program it is saved to database.
         }
 
         private void exitBtnLf_Click(object sender, EventArgs e)

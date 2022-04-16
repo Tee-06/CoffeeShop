@@ -151,6 +151,7 @@ namespace CoffeeShopC_I_S
             this.completeOrderBtn.TabIndex = 17;
             this.completeOrderBtn.Text = "Complete Order";
             this.completeOrderBtn.UseVisualStyleBackColor = false;
+            this.completeOrderBtn.Click += new System.EventHandler(this.completeOrderBtn_Click);
             // 
             // orderListLbl
             // 
