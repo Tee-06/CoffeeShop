@@ -16,7 +16,7 @@ namespace CoffeeShopC_I_S
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MenuForm());
         }
     }
 }

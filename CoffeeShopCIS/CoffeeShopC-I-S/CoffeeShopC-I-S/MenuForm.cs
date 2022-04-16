@@ -36,9 +36,6 @@ namespace CoffeeShopC_I_S
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Close();
         }
 
         // ! on the add order button click, the selected item in the menu list box gets added to the order listbox
@@ -66,6 +63,26 @@ namespace CoffeeShopC_I_S
                 {
                     MessageBox.Show("Please Select An Item To Remove.");
                 }
+            }
+        }
+
+        private void ownerMenuBtn_Click(object sender, EventArgs e)
+        {
+            adminForm admin = new adminForm();
+            this.Hide();
+            admin.ShowDialog();
+            this.Show();
+
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            menuLB.Items.Clear();
+            priceLB.Items.Clear();
+            foreach (Product product in productdb.Products)
+            {
+                menuLB.Items.Add(product.ProductName);
+                priceLB.Items.Add("$" + Math.Round(product.ProductPrice, 2).ToString());
             }
         }
     }

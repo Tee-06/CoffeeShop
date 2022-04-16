@@ -60,9 +60,9 @@ namespace CoffeeShopC_I_S
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitBtnLf = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.removeButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeShopdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingNavigator)).BeginInit();
@@ -313,6 +313,19 @@ namespace CoffeeShopC_I_S
             this.exitBtnLf.UseVisualStyleBackColor = false;
             this.exitBtnLf.Click += new System.EventHandler(this.exitBtnLf_Click);
             // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.Chocolate;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(12, 392);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(140, 46);
+            this.saveButton.TabIndex = 12;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.Color.Chocolate;
@@ -336,19 +349,6 @@ namespace CoffeeShopC_I_S
             this.removeButton.TabIndex = 11;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = false;
-            // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.Chocolate;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(12, 392);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(140, 46);
-            this.saveButton.TabIndex = 12;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // adminForm
             // 
@@ -410,8 +410,8 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Button exitBtnLf;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button removeButton;
-        private System.Windows.Forms.Button saveButton;
     }
 }

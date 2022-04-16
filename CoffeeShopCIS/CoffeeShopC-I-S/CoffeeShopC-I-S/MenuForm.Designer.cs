@@ -31,6 +31,7 @@ namespace CoffeeShopC_I_S
         {
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
+            this.removeBtn = new System.Windows.Forms.Button();
             this.addToOrderBtn = new System.Windows.Forms.Button();
             this.qtyControl = new System.Windows.Forms.NumericUpDown();
             this.priceLB = new System.Windows.Forms.ListBox();
@@ -41,7 +42,7 @@ namespace CoffeeShopC_I_S
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
-            this.removeBtn = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,19 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.Name = "menuHoldingPanel";
             this.menuHoldingPanel.Size = new System.Drawing.Size(511, 442);
             this.menuHoldingPanel.TabIndex = 8;
+            // 
+            // removeBtn
+            // 
+            this.removeBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.removeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeBtn.Location = new System.Drawing.Point(128, 305);
+            this.removeBtn.Name = "removeBtn";
+            this.removeBtn.Size = new System.Drawing.Size(139, 43);
+            this.removeBtn.TabIndex = 23;
+            this.removeBtn.Text = "Remove";
+            this.removeBtn.UseVisualStyleBackColor = false;
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // addToOrderBtn
             // 
@@ -179,19 +193,20 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.TabIndex = 19;
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
+            this.ownerMenuBtn.Click += new System.EventHandler(this.ownerMenuBtn_Click);
             // 
-            // removeBtn
+            // refreshButton
             // 
-            this.removeBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.removeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removeBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeBtn.Location = new System.Drawing.Point(128, 305);
-            this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(139, 43);
-            this.removeBtn.TabIndex = 23;
-            this.removeBtn.Text = "Remove";
-            this.removeBtn.UseVisualStyleBackColor = false;
-            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
+            this.refreshButton.BackColor = System.Drawing.Color.Chocolate;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshButton.Location = new System.Drawing.Point(373, 473);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(134, 43);
+            this.refreshButton.TabIndex = 20;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // MenuForm
             // 
@@ -199,6 +214,7 @@ namespace CoffeeShopC_I_S
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(896, 528);
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.ownerMenuBtn);
             this.Controls.Add(this.pastOrdersBtn);
             this.Controls.Add(this.menuHoldingPanel);
@@ -229,5 +245,6 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Button addToOrderBtn;
         private System.Windows.Forms.NumericUpDown qtyControl;
         private System.Windows.Forms.Button removeBtn;
+        private System.Windows.Forms.Button refreshButton;
     }
 }
