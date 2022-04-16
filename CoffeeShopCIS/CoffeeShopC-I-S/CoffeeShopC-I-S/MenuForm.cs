@@ -31,9 +31,7 @@ namespace CoffeeShopC_I_S
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Close();
+
         }
 
         private void addToOrderBtn_Click(object sender, EventArgs e)
@@ -45,6 +43,14 @@ namespace CoffeeShopC_I_S
                     orderLB.Items.Add(menuLB.SelectedItem.ToString());
                 }
             }
+        }
+
+        private void ownerMenuBtn_Click(object sender, EventArgs e)
+        {
+            adminForm admin = new adminForm();
+            this.Hide();
+            admin.ShowDialog();
+            this.Show();
         }
     }
 }

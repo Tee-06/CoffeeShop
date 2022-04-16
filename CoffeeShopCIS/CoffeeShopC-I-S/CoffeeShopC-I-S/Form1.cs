@@ -28,9 +28,10 @@ namespace CoffeeShopC_I_S
             
             if (IsValidUser(usernameTB.Text, passwordTB.Text, roleComboBox.Text.ToString()))
             {
-                this.Hide();
                 MenuForm menu = new MenuForm();
+                this.Hide();
                 menu.ShowDialog();
+                this.Show();
             }
             else
             {
@@ -71,6 +72,7 @@ namespace CoffeeShopC_I_S
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
