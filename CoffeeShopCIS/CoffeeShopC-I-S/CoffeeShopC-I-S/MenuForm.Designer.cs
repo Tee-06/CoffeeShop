@@ -33,7 +33,6 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
             this.removeBtn = new System.Windows.Forms.Button();
             this.addToOrderBtn = new System.Windows.Forms.Button();
-            this.qtyControl = new System.Windows.Forms.NumericUpDown();
             this.priceLB = new System.Windows.Forms.ListBox();
             this.menuLbl = new System.Windows.Forms.Label();
             this.menuLB = new System.Windows.Forms.ListBox();
@@ -44,7 +43,6 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).BeginInit();
             this.SuspendLayout();
             // 
             // exitBtnLf
@@ -65,7 +63,6 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.menuHoldingPanel.Controls.Add(this.removeBtn);
             this.menuHoldingPanel.Controls.Add(this.addToOrderBtn);
-            this.menuHoldingPanel.Controls.Add(this.qtyControl);
             this.menuHoldingPanel.Controls.Add(this.priceLB);
             this.menuHoldingPanel.Controls.Add(this.menuLbl);
             this.menuHoldingPanel.Controls.Add(this.menuLB);
@@ -102,13 +99,6 @@ namespace CoffeeShopC_I_S
             this.addToOrderBtn.Text = "Add";
             this.addToOrderBtn.UseVisualStyleBackColor = false;
             this.addToOrderBtn.Click += new System.EventHandler(this.addToOrderBtn_Click);
-            // 
-            // qtyControl
-            // 
-            this.qtyControl.Location = new System.Drawing.Point(14, 260);
-            this.qtyControl.Name = "qtyControl";
-            this.qtyControl.Size = new System.Drawing.Size(120, 20);
-            this.qtyControl.TabIndex = 21;
             // 
             // priceLB
             // 
@@ -226,7 +216,6 @@ namespace CoffeeShopC_I_S
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuHoldingPanel.ResumeLayout(false);
             this.menuHoldingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,7 +233,6 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.ListBox menuLB;
         private System.Windows.Forms.ListBox priceLB;
         private System.Windows.Forms.Button addToOrderBtn;
-        private System.Windows.Forms.NumericUpDown qtyControl;
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button refreshButton;
     }

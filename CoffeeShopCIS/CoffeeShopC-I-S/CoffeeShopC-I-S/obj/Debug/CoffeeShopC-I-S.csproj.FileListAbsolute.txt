@@ -28,3 +28,5 @@ C:\Users\logan\.generalFiles\Documents\GitHub\CoffeeShop\CoffeeShopCIS\CoffeeSho
 C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.adminForm.resources
 C:\Users\logan\.generalFiles\Documents\GitHub\CoffeeShop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.PastOrdersForm.resources
 C:\Users\logan\.generalFiles\Documents\GitHub\CoffeeShop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.ReceiptForm.resources
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.PastOrdersForm.resources
+C:\Users\Tyler\Documents\GitHub\Coffee Shop\CoffeeShopCIS\CoffeeShopC-I-S\CoffeeShopC-I-S\obj\Debug\CoffeeShopC_I_S.ReceiptForm.resources

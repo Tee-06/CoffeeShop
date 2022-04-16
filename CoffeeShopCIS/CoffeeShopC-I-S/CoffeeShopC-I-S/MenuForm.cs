@@ -50,6 +50,10 @@ namespace CoffeeShopC_I_S
                     orderLB.Items.Add(menuLB.SelectedItem.ToString());
                 }
             }
+            //for (int i = 0; i < 1; i++)
+            //{
+            //    orderLB.Items.Add(menuLB.SelectedItem.ToString()+ );
+            //}
         }
 
         private void removeBtn_Click(object sender, EventArgs e)
@@ -60,6 +64,7 @@ namespace CoffeeShopC_I_S
                 {
                     orderLB.Items.Remove(orderLB.SelectedItem.ToString());
                 }
+                // !Dont think this actually works. So something needs to be selected
                 else if(menuLB.SelectedItem.ToString() == null)
                 {
                     MessageBox.Show("Please Select An Item To Remove.");
