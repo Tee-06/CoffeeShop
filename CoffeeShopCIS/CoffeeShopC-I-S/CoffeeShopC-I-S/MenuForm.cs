@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //Auth: Tyler Petersen
+//Edit: Logan Wright
 //Desc: Coffee Shop App
 // UsersTable, and Products Database made by Tyler Petersen
 //Date:4/15/22
@@ -68,6 +69,7 @@ namespace CoffeeShopC_I_S
 
         private void ownerMenuBtn_Click(object sender, EventArgs e)
         {
+            //button leading to the admin page -Logan
             adminForm admin = new adminForm();
             this.Hide();
             admin.ShowDialog();
@@ -77,6 +79,7 @@ namespace CoffeeShopC_I_S
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
+            //refreshes the listboxes with that information in the database -Logan
             menuLB.Items.Clear();
             priceLB.Items.Clear();
             foreach (Product product in productdb.Products)
