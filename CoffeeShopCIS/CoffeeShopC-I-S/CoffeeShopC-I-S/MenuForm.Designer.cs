@@ -31,6 +31,8 @@ namespace CoffeeShopC_I_S
         {
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
+            this.addToOrderBtn = new System.Windows.Forms.Button();
+            this.qtyControl = new System.Windows.Forms.NumericUpDown();
             this.priceLB = new System.Windows.Forms.ListBox();
             this.menuLbl = new System.Windows.Forms.Label();
             this.menuLB = new System.Windows.Forms.ListBox();
@@ -39,8 +41,6 @@ namespace CoffeeShopC_I_S
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
-            this.qtyControl = new System.Windows.Forms.NumericUpDown();
-            this.addToOrderBtn = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyControl)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,26 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.Size = new System.Drawing.Size(511, 442);
             this.menuHoldingPanel.TabIndex = 8;
             // 
+            // addToOrderBtn
+            // 
+            this.addToOrderBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.addToOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addToOrderBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToOrderBtn.Location = new System.Drawing.Point(14, 305);
+            this.addToOrderBtn.Name = "addToOrderBtn";
+            this.addToOrderBtn.Size = new System.Drawing.Size(108, 43);
+            this.addToOrderBtn.TabIndex = 22;
+            this.addToOrderBtn.Text = "Add";
+            this.addToOrderBtn.UseVisualStyleBackColor = false;
+            this.addToOrderBtn.Click += new System.EventHandler(this.addToOrderBtn_Click);
+            // 
+            // qtyControl
+            // 
+            this.qtyControl.Location = new System.Drawing.Point(14, 260);
+            this.qtyControl.Name = "qtyControl";
+            this.qtyControl.Size = new System.Drawing.Size(120, 20);
+            this.qtyControl.TabIndex = 21;
+            // 
             // priceLB
             // 
             this.priceLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,7 +123,6 @@ namespace CoffeeShopC_I_S
             this.menuLB.Name = "menuLB";
             this.menuLB.Size = new System.Drawing.Size(150, 212);
             this.menuLB.TabIndex = 18;
-            this.menuLB.SelectedIndexChanged += new System.EventHandler(this.menuLB_SelectedIndexChanged);
             // 
             // completeOrderBtn
             // 
@@ -158,25 +177,6 @@ namespace CoffeeShopC_I_S
             this.ownerMenuBtn.TabIndex = 19;
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
-            // 
-            // qtyControl
-            // 
-            this.qtyControl.Location = new System.Drawing.Point(14, 260);
-            this.qtyControl.Name = "qtyControl";
-            this.qtyControl.Size = new System.Drawing.Size(120, 20);
-            this.qtyControl.TabIndex = 21;
-            // 
-            // addToOrderBtn
-            // 
-            this.addToOrderBtn.BackColor = System.Drawing.Color.Chocolate;
-            this.addToOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addToOrderBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToOrderBtn.Location = new System.Drawing.Point(14, 305);
-            this.addToOrderBtn.Name = "addToOrderBtn";
-            this.addToOrderBtn.Size = new System.Drawing.Size(108, 43);
-            this.addToOrderBtn.TabIndex = 22;
-            this.addToOrderBtn.Text = "Add";
-            this.addToOrderBtn.UseVisualStyleBackColor = false;
             // 
             // MenuForm
             // 

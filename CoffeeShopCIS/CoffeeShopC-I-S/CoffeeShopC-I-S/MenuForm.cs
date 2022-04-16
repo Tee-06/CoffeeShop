@@ -12,8 +12,7 @@ namespace CoffeeShopC_I_S
 {
     public partial class MenuForm : Form
     {
-        UsersDataContext productBD = new UsersDataContext();
-        OpenFileDialog open = new OpenFileDialog();
+        UsersDataContext productdb = new UsersDataContext();
         public MenuForm()
         {
             InitializeComponent();
@@ -21,12 +20,12 @@ namespace CoffeeShopC_I_S
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-            foreach (Product product in productBD.Products)
+            foreach (Product product in productdb.Products)
             {
                 menuLB.Items.Add(product.ProductName);
-                priceLB.Items.Add(product.ProductPrice);
+                priceLB.Items.Add("$" + Math.Round(product.ProductPrice, 2).ToString());
             }
-            
+
         }
 
         private void exitBtnLf_Click(object sender, EventArgs e)
@@ -37,30 +36,15 @@ namespace CoffeeShopC_I_S
             this.Close();
         }
 
-        private void latteBtn_Click(object sender, EventArgs e)
+        private void addToOrderBtn_Click(object sender, EventArgs e)
         {
-            UsersDataContext usersdb = new UsersDataContext();
-            foreach (Product product in usersdb.Products)
+            foreach (Product product in productdb.Products)
             {
+                if (menuLB.SelectedItem.ToString() == product.ProductName)
                 {
-                    orderLB.Items.Add(product.ProductName);
+                    orderLB.Items.Add(menuLB.SelectedItem.ToString());
                 }
             }
-        }
-
-        private void mochaBtn_Click(object sender, EventArgs e)
-        {
-            foreach (Product product in productBD.Products);
-            {
-                
-                //orderLB.Items.Add();
-                
-            }
-        }
-
-        private void menuLB_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
