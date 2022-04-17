@@ -46,14 +46,26 @@ namespace CoffeeShopC_I_S
         //! Add to orderLB, adds the menu selected item to the order LB - Tyler
         private void addToOrderBtn_Click(object sender, EventArgs e)
         {
-            
-            foreach (Product product in productdb.Products)
+            try
             {
-                if (menuLB.SelectedItem.ToString() == product.ProductName)
+                if (menuLB.SelectedItem == null)
                 {
-                    orderLB.Items.Add(menuLB.SelectedItem.ToString());
+                    MessageBox.Show("Please Select an Item in the ListBox Thank you.");
                 }
-
+                else
+                {
+                    foreach (Product product in productdb.Products)
+                    {
+                        if (menuLB.SelectedItem.ToString() == product.ProductName)
+                        {
+                            orderLB.Items.Add(menuLB.SelectedItem.ToString());
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             //-Tyler \/\/\/
             //! This loops through the orderlb and then looks through database to find the price, once price is found it adds it to the total.
@@ -76,18 +88,32 @@ namespace CoffeeShopC_I_S
 
         private void removeBtn_Click(object sender, EventArgs e)
         {
-            //! Remove button, works if something is selected, but if nothing is selected it will throw an error, in the .exe that might be different idk yet tho -
-            foreach (Product product in productdb.Products)
+            try
             {
-                if (menuLB.SelectedItem.ToString() == product.ProductName)
+                if (orderLB.SelectedItem == null)
                 {
-                    orderLB.Items.Remove(orderLB.SelectedItem.ToString());
+                    MessageBox.Show("Please Select an Item in the ListBox Thank you.");
                 }
-                // !Dont think this actually works. So something needs to be selected
-                else if(menuLB.SelectedItem.ToString() == null)
+                else
                 {
-                    MessageBox.Show("Please Select An Item To Remove.");
+                    //! Remove button, works if something is selected, but if nothing is selected it will throw an error, in the .exe that might be different idk yet tho -
+                    foreach (Product product in productdb.Products)
+                    {
+                        if (menuLB.SelectedItem.ToString() == product.ProductName)
+                        {
+                            orderLB.Items.Remove(orderLB.SelectedItem.ToString());
+                        }
+                        // !Dont think this actually works. So something needs to be selected
+                        else if (menuLB.SelectedItem.ToString() == null)
+                        {
+                            MessageBox.Show("Please Select An Item To Remove.");
+                        }
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             //\/\/\/
             //! This loops through the orderlb and then looks through database to find the price, once price is found it removes it to the total.

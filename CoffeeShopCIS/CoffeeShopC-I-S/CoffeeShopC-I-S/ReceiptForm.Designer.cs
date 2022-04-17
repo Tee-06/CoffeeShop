@@ -30,6 +30,11 @@ namespace CoffeeShopC_I_S
         private void InitializeComponent()
         {
             this.exitBtnRf = new System.Windows.Forms.Button();
+            this.receiptLB = new System.Windows.Forms.ListBox();
+            this.menuLbl = new System.Windows.Forms.Label();
+            this.receiptPannel = new System.Windows.Forms.Panel();
+            this.printBtn = new System.Windows.Forms.Button();
+            this.receiptPannel.SuspendLayout();
             this.SuspendLayout();
             // 
             // exitBtnRf
@@ -37,25 +42,69 @@ namespace CoffeeShopC_I_S
             this.exitBtnRf.BackColor = System.Drawing.Color.Chocolate;
             this.exitBtnRf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtnRf.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtnRf.Location = new System.Drawing.Point(426, 471);
+            this.exitBtnRf.Location = new System.Drawing.Point(246, 349);
             this.exitBtnRf.Name = "exitBtnRf";
             this.exitBtnRf.Size = new System.Drawing.Size(121, 43);
             this.exitBtnRf.TabIndex = 8;
             this.exitBtnRf.Text = "Exit";
             this.exitBtnRf.UseVisualStyleBackColor = false;
             // 
+            // receiptLB
+            // 
+            this.receiptLB.FormattingEnabled = true;
+            this.receiptLB.Location = new System.Drawing.Point(8, 38);
+            this.receiptLB.Name = "receiptLB";
+            this.receiptLB.Size = new System.Drawing.Size(167, 199);
+            this.receiptLB.TabIndex = 9;
+            // 
+            // menuLbl
+            // 
+            this.menuLbl.AutoSize = true;
+            this.menuLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLbl.Location = new System.Drawing.Point(2, 1);
+            this.menuLbl.Name = "menuLbl";
+            this.menuLbl.Size = new System.Drawing.Size(152, 34);
+            this.menuLbl.TabIndex = 20;
+            this.menuLbl.Text = "Menu List";
+            // 
+            // receiptPannel
+            // 
+            this.receiptPannel.BackColor = System.Drawing.Color.Gainsboro;
+            this.receiptPannel.Controls.Add(this.receiptLB);
+            this.receiptPannel.Controls.Add(this.menuLbl);
+            this.receiptPannel.Location = new System.Drawing.Point(15, 10);
+            this.receiptPannel.Name = "receiptPannel";
+            this.receiptPannel.Size = new System.Drawing.Size(352, 333);
+            this.receiptPannel.TabIndex = 21;
+            // 
+            // printBtn
+            // 
+            this.printBtn.BackColor = System.Drawing.Color.Chocolate;
+            this.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printBtn.Location = new System.Drawing.Point(15, 348);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(121, 43);
+            this.printBtn.TabIndex = 22;
+            this.printBtn.Text = "Print";
+            this.printBtn.UseVisualStyleBackColor = false;
+            // 
             // ReceiptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(559, 526);
+            this.ClientSize = new System.Drawing.Size(382, 403);
+            this.Controls.Add(this.printBtn);
+            this.Controls.Add(this.receiptPannel);
             this.Controls.Add(this.exitBtnRf);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ReceiptForm";
             this.Text = "ReceiptForm";
             this.Load += new System.EventHandler(this.ReceiptForm_Load);
+            this.receiptPannel.ResumeLayout(false);
+            this.receiptPannel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +112,9 @@ namespace CoffeeShopC_I_S
         #endregion
 
         private System.Windows.Forms.Button exitBtnRf;
+        private System.Windows.Forms.ListBox receiptLB;
+        private System.Windows.Forms.Label menuLbl;
+        private System.Windows.Forms.Panel receiptPannel;
+        private System.Windows.Forms.Button printBtn;
     }
 }
