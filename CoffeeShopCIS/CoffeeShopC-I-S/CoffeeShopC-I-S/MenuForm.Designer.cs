@@ -235,6 +235,7 @@ namespace CoffeeShopC_I_S
             this.Controls.Add(this.pastOrdersBtn);
             this.Controls.Add(this.menuHoldingPanel);
             this.Controls.Add(this.exitBtnLf);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MenuForm";
             this.Text = "MenuForm";
