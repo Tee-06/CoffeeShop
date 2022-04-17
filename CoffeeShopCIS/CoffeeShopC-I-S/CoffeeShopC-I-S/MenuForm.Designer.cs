@@ -191,7 +191,7 @@ namespace CoffeeShopC_I_S
             this.pastOrdersBtn.BackColor = System.Drawing.Color.Chocolate;
             this.pastOrdersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pastOrdersBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pastOrdersBtn.Location = new System.Drawing.Point(12, 116);
+            this.pastOrdersBtn.Location = new System.Drawing.Point(12, 89);
             this.pastOrdersBtn.Name = "pastOrdersBtn";
             this.pastOrdersBtn.Size = new System.Drawing.Size(268, 43);
             this.pastOrdersBtn.TabIndex = 18;

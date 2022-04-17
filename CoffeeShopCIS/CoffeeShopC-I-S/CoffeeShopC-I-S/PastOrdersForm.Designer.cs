@@ -48,6 +48,7 @@ namespace CoffeeShopC_I_S
             this.printBtn.TabIndex = 25;
             this.printBtn.Text = "Show";
             this.printBtn.UseVisualStyleBackColor = false;
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
             // 
             // receiptPannel
             // 

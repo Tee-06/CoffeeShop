@@ -34,6 +34,8 @@ namespace CoffeeShopC_I_S
             this.menuLbl = new System.Windows.Forms.Label();
             this.receiptPannel = new System.Windows.Forms.Panel();
             this.printBtn = new System.Windows.Forms.Button();
+            this.rCtotalLbl = new System.Windows.Forms.Label();
+            this.recieptTotalTB = new System.Windows.Forms.TextBox();
             this.receiptPannel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +72,8 @@ namespace CoffeeShopC_I_S
             // receiptPannel
             // 
             this.receiptPannel.BackColor = System.Drawing.Color.Gainsboro;
+            this.receiptPannel.Controls.Add(this.rCtotalLbl);
+            this.receiptPannel.Controls.Add(this.recieptTotalTB);
             this.receiptPannel.Controls.Add(this.receiptLB);
             this.receiptPannel.Controls.Add(this.menuLbl);
             this.receiptPannel.Location = new System.Drawing.Point(15, 10);
@@ -88,6 +92,27 @@ namespace CoffeeShopC_I_S
             this.printBtn.TabIndex = 22;
             this.printBtn.Text = "Print";
             this.printBtn.UseVisualStyleBackColor = false;
+            // 
+            // rCtotalLbl
+            // 
+            this.rCtotalLbl.AutoSize = true;
+            this.rCtotalLbl.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rCtotalLbl.Location = new System.Drawing.Point(8, 243);
+            this.rCtotalLbl.Name = "rCtotalLbl";
+            this.rCtotalLbl.Size = new System.Drawing.Size(93, 34);
+            this.rCtotalLbl.TabIndex = 27;
+            this.rCtotalLbl.Text = "Total:";
+            // 
+            // recieptTotalTB
+            // 
+            this.recieptTotalTB.BackColor = System.Drawing.Color.Black;
+            this.recieptTotalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recieptTotalTB.ForeColor = System.Drawing.Color.Chocolate;
+            this.recieptTotalTB.Location = new System.Drawing.Point(103, 243);
+            this.recieptTotalTB.Multiline = true;
+            this.recieptTotalTB.Name = "recieptTotalTB";
+            this.recieptTotalTB.Size = new System.Drawing.Size(150, 65);
+            this.recieptTotalTB.TabIndex = 26;
             // 
             // ReceiptForm
             // 
@@ -116,5 +141,7 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Label menuLbl;
         private System.Windows.Forms.Panel receiptPannel;
         private System.Windows.Forms.Button printBtn;
+        private System.Windows.Forms.Label rCtotalLbl;
+        private System.Windows.Forms.TextBox recieptTotalTB;
     }
 }

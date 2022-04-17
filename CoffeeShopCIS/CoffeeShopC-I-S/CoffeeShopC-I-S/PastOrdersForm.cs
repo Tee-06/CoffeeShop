@@ -26,5 +26,12 @@ namespace CoffeeShopC_I_S
         {
             this.Close();
         }
+
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+            //Todo: logan create on show click, it should re route to reciept and populate the receipt list box with what ever selected items you selected.
+            //todo: so in turn that should populate the listbox with the items that were previously ordered, and should populate the receiptTotalTB with the total that it was
+            //todo: and then it would allow them to print their receipt if they changed their mind or something -Tyler.
+        }
     }
 }
