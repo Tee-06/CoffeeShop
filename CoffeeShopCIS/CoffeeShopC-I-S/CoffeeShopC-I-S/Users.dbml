@@ -15,4 +15,11 @@
       <Column Name="ProductPrice" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.PastOrders" Member="PastOrders">
+    <Type Name="PastOrder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Order]" Member="Order" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>
