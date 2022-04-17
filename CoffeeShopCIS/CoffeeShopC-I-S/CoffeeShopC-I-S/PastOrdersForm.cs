@@ -21,5 +21,10 @@ namespace CoffeeShopC_I_S
         {
             //todo: Logan create Past Orders Form.
         }
+
+        private void exitBtnRf_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
