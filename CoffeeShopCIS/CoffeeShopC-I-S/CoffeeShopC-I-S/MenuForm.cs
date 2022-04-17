@@ -158,12 +158,9 @@ namespace CoffeeShopC_I_S
 
         private void completeOrderBtn_Click(object sender, EventArgs e)
         {
-            
             //todo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
-            ReceiptForm reciept = new ReceiptForm();
-            this.Hide();
-            reciept.ShowDialog();
-            this.Show();
+            ReceiptForm rf = new ReceiptForm();
+            rf.ShowDialog();
         }
     }
 }

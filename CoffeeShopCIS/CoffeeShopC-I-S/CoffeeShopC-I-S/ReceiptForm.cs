@@ -15,17 +15,17 @@ namespace CoffeeShopC_I_S
         public ReceiptForm()
         {
             InitializeComponent();
+            
+
         }
 
         private void ReceiptForm_Load(object sender, EventArgs e)
         {
             //todo: Receipt Form doesn't have to have full functionality i can help if you dont get it all the way finished.
-            
-        }
-
-        private void getInfoBtn_Click(object sender, EventArgs e)
-        {
-            
+            ReceiptForm NewForm = new ReceiptForm();
+            NewForm.ShowDialog();
+            receiptLB.Items.Clear();
+            receiptLB.Items.AddRange(NewForm.receiptLB.Items);
         }
     }
 }
