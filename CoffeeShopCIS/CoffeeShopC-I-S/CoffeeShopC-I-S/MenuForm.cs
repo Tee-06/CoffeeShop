@@ -85,7 +85,7 @@ namespace CoffeeShopC_I_S
             }
 
         }
-
+        //! on remove click, runs a try catch, first it tries if there is no selected item then it prompts user to select an item to remove.
         private void removeBtn_Click(object sender, EventArgs e)
         {
             try
@@ -95,8 +95,9 @@ namespace CoffeeShopC_I_S
                     MessageBox.Show("Please Select an Item in the ListBox Thank you.");
                 }
                 else
-                {
-                    //! Remove button, works if something is selected, but if nothing is selected it will throw an error, in the .exe that might be different idk yet tho -
+                {   
+                    //xFixed this
+                    //x! Remove button, works if something is selected, but if nothing is selected it will throw an error, in the .exe that might be different idk yet tho -
                     foreach (Product product in productdb.Products)
                     {
                         if (menuLB.SelectedItem.ToString() == product.ProductName)
@@ -115,9 +116,11 @@ namespace CoffeeShopC_I_S
             {
                 MessageBox.Show(ex.Message);
             }
+
             //\/\/\/
             //! This loops through the orderlb and then looks through database to find the price, once price is found it removes it to the total.
             //! does that until there are no more items left to loop through.
+            
             decimal totalPrice = 0;
             foreach (string str in orderLB.Items)
             {
@@ -155,7 +158,10 @@ namespace CoffeeShopC_I_S
                 priceLB.Items.Add("$" + Math.Round(product.ProductPrice, 2).ToString());
             }
         }
-        public string[] get()
+
+
+        //! Was going to add the listbox items into an array and pass them over but the list was easier and seemed more efficient. - Tyler
+        /* public string[] get()
         {
             string[] arr = new string[orderLB.Items.Count];
             for (int i = 0; i < orderLB.Items.Count; i++)
@@ -164,10 +170,13 @@ namespace CoffeeShopC_I_S
             }
             return arr;
         }
+        */
 
+
+        // on Complete order button, list of strings and makes them equal to whats in the order listbox if they are type string, then adds to list -Tyler
         private void completeOrderBtn_Click(object sender, EventArgs e)
         {
-            //todo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
+            //xtodo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
             //button leading to the recipt form -Tyler
             List<string> lst = orderLB.Items.OfType<String>().ToList();
             ReceiptForm rf = new ReceiptForm(lst);

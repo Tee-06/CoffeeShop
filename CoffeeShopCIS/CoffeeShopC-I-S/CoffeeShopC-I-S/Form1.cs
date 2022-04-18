@@ -21,8 +21,8 @@ namespace CoffeeShopC_I_S
             InitializeComponent();
         }
 
-        // checks method isValidUser using If statement
-        // If valid user returns true, then it will hide form 1 and go to menu form 
+        // checks method isValidUser using If statement-Tyler
+        // If valid user returns true, then it will hide form 1 and go to menu form -Tyler
         private void signInBtn_Click(object sender, EventArgs e)
         {
             
@@ -35,19 +35,18 @@ namespace CoffeeShopC_I_S
             }
             else
             {
-                // If wrong information is provided, User is prompted to correct it.
+                // If wrong information is provided, User is prompted to correct it. -Tyler
                 MessageBox.Show("Username, Password, or Role is Incorrect is incorrect please try again");
             }
         }
+        //Bool for is valid user -Tyler
         private bool IsValidUser(string Username, string Password, string Role)
         {
             
                 UsersDataContext usersdb = new UsersDataContext();
-            
-                //! For some reason the combo box needs to be .Text instead of selectedvalue but it works.
 
-                //! Creates variable User and variable s
-                //! pulls from database and checks for if whats in the database matches whats been put into the textboxes and combo box
+                //! Creates variable User and variable s -Tyler
+                //! pulls from database and checks for if whats in the database matches whats been put into the textboxes and combo box -Tyler
 
             var user = from s in usersdb.UsersTables
                        where s.Username == usernameTB.Text && s.Password == passwordTB.Text && s.Role == roleComboBox.Text.ToString()
@@ -57,7 +56,7 @@ namespace CoffeeShopC_I_S
                     return true;
                     
                     //! I have an extention called better comments, this is just better for me for organization -Tyler
-                    //! if this causes an issue for you when viewing, either install the extention and then restart visual studio, or remove whatever is after the initial //
+                    //! if this causes an issue for you when viewing, either install the extention and then restart visual studio, or remove whatever is after the initial -Tyler
                     //xthis.Hide();
                     //xMenuForm menu = new MenuForm();
                    //xmenu.Show();
@@ -68,13 +67,14 @@ namespace CoffeeShopC_I_S
                 }
         }
 
-        //Exit button
+        //Exit button -Tyler
         private void exitBtnLf_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+        //! On Load fills userstable, and sets the username and password textbox to say username and password -Tyler
         private void LoginForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'coffeeShopdbDataSet.UsersTable' table. You can move, or remove it, as needed.
@@ -84,7 +84,7 @@ namespace CoffeeShopC_I_S
             passwordTB.Text = "Password";
 
         }
-        // watermark placeholder for username and password textboxes on Enter and on Leave
+        // watermark placeholder for username and password textboxes on Enter and on Leave -Tyler
         private void usernameTB_Enter(object sender, EventArgs e)
         {
             if(usernameTB.Text == "Username")
@@ -94,6 +94,7 @@ namespace CoffeeShopC_I_S
             }
         }
 
+        // when they click or tab out of the textbox, if nothing is typed in it it shows the watermark for what it's supposed to be - Tyler
         private void usernameTB_Leave(object sender, EventArgs e)
         {
             if (usernameTB.Text == "")
@@ -102,7 +103,7 @@ namespace CoffeeShopC_I_S
                 usernameTB.ForeColor = Color.Silver;
             }
         }
-
+        // Same for password on enter and leave -Tyler
         private void passwordTB_Enter(object sender, EventArgs e)
         {
             if (passwordTB.Text == "Password")

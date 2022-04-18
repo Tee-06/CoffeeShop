@@ -52,7 +52,7 @@ namespace CoffeeShopC_I_S
             this.exitBtnRf.Location = new System.Drawing.Point(246, 349);
             this.exitBtnRf.Name = "exitBtnRf";
             this.exitBtnRf.Size = new System.Drawing.Size(121, 43);
-            this.exitBtnRf.TabIndex = 8;
+            this.exitBtnRf.TabIndex = 2;
             this.exitBtnRf.Text = "Exit";
             this.exitBtnRf.UseVisualStyleBackColor = false;
             this.exitBtnRf.Click += new System.EventHandler(this.exitBtnRf_Click);
@@ -63,7 +63,7 @@ namespace CoffeeShopC_I_S
             this.receiptLB.Location = new System.Drawing.Point(8, 38);
             this.receiptLB.Name = "receiptLB";
             this.receiptLB.Size = new System.Drawing.Size(167, 199);
-            this.receiptLB.TabIndex = 9;
+            this.receiptLB.TabIndex = 1;
             // 
             // receiptlbl
             // 
@@ -72,7 +72,7 @@ namespace CoffeeShopC_I_S
             this.receiptlbl.Location = new System.Drawing.Point(2, 1);
             this.receiptlbl.Name = "receiptlbl";
             this.receiptlbl.Size = new System.Drawing.Size(120, 34);
-            this.receiptlbl.TabIndex = 20;
+            this.receiptlbl.TabIndex = 0;
             this.receiptlbl.Text = "Receipt";
             // 
             // receiptPannel
@@ -94,7 +94,7 @@ namespace CoffeeShopC_I_S
             this.rCtotalLbl.Location = new System.Drawing.Point(8, 243);
             this.rCtotalLbl.Name = "rCtotalLbl";
             this.rCtotalLbl.Size = new System.Drawing.Size(93, 34);
-            this.rCtotalLbl.TabIndex = 27;
+            this.rCtotalLbl.TabIndex = 3;
             this.rCtotalLbl.Text = "Total:";
             // 
             // recieptTotalTB
@@ -105,8 +105,9 @@ namespace CoffeeShopC_I_S
             this.recieptTotalTB.Location = new System.Drawing.Point(103, 243);
             this.recieptTotalTB.Multiline = true;
             this.recieptTotalTB.Name = "recieptTotalTB";
+            this.recieptTotalTB.ReadOnly = true;
             this.recieptTotalTB.Size = new System.Drawing.Size(150, 65);
-            this.recieptTotalTB.TabIndex = 26;
+            this.recieptTotalTB.TabIndex = 1;
             // 
             // printBtn
             // 
@@ -116,7 +117,7 @@ namespace CoffeeShopC_I_S
             this.printBtn.Location = new System.Drawing.Point(15, 348);
             this.printBtn.Name = "printBtn";
             this.printBtn.Size = new System.Drawing.Size(121, 43);
-            this.printBtn.TabIndex = 22;
+            this.printBtn.TabIndex = 1;
             this.printBtn.Text = "Print";
             this.printBtn.UseVisualStyleBackColor = false;
             this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
@@ -141,7 +142,7 @@ namespace CoffeeShopC_I_S
             this.Controls.Add(this.receiptPannel);
             this.Controls.Add(this.exitBtnRf);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReceiptForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ReceiptForm";

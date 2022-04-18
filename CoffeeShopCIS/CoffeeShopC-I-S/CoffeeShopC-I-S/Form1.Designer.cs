@@ -147,7 +147,7 @@ namespace CoffeeShopC_I_S
             this.signInBtn.Location = new System.Drawing.Point(36, 386);
             this.signInBtn.Name = "signInBtn";
             this.signInBtn.Size = new System.Drawing.Size(309, 61);
-            this.signInBtn.TabIndex = 4;
+            this.signInBtn.TabIndex = 5;
             this.signInBtn.Text = "Sign In";
             this.signInBtn.UseVisualStyleBackColor = false;
             this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
@@ -171,7 +171,7 @@ namespace CoffeeShopC_I_S
             this.passwordTB.Multiline = true;
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.Size = new System.Drawing.Size(270, 38);
-            this.passwordTB.TabIndex = 4;
+            this.passwordTB.TabIndex = 3;
             this.passwordTB.Enter += new System.EventHandler(this.passwordTB_Enter);
             this.passwordTB.Leave += new System.EventHandler(this.passwordTB_Leave);
             // 
@@ -220,7 +220,7 @@ namespace CoffeeShopC_I_S
             this.usernameTB.Multiline = true;
             this.usernameTB.Name = "usernameTB";
             this.usernameTB.Size = new System.Drawing.Size(270, 38);
-            this.usernameTB.TabIndex = 5;
+            this.usernameTB.TabIndex = 1;
             this.usernameTB.Enter += new System.EventHandler(this.usernameTB_Enter);
             this.usernameTB.Leave += new System.EventHandler(this.usernameTB_Leave);
             // 

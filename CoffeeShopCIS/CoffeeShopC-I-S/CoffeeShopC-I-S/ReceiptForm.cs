@@ -13,7 +13,7 @@ namespace CoffeeShopC_I_S
 {
     public partial class ReceiptForm : Form
     {
-        
+        // For each str in orderlb *Menu Form*  add it to the receipt listbox - Tyler
         public ReceiptForm(List<string>lst)
         {
             InitializeComponent();
@@ -27,13 +27,14 @@ namespace CoffeeShopC_I_S
         {
            //
         }
-
+        
+        // Closes the Receipt form - Tyler
         private void exitBtnRf_Click(object sender, EventArgs e)
         {
             this.Close();
         }
       
-
+        // On print button click, it prints the whole form, couldn't figure out the way to just print the listbox and textbox values/Text -Tyler
         private void printBtn_Click(object sender, EventArgs e)
         {
             PrintDocument pd = new PrintDocument();
