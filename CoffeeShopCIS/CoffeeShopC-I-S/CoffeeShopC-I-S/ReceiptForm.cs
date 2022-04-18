@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 
+//Auth: Logan Wright and Tyler Petersen
+//Desc: Coffee Shop App's Receipt Page that allows the user to print and view the completed orders information
+//Date:4/18/22
+
 namespace CoffeeShopC_I_S
 {
     public partial class ReceiptForm : Form
@@ -55,6 +59,11 @@ namespace CoffeeShopC_I_S
             this.DrawToBitmap(img, bounds);
             Point p = new Point(100, 100);
             e.Graphics.DrawImage(img, p);
+        }
+
+        private void receiptPannel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

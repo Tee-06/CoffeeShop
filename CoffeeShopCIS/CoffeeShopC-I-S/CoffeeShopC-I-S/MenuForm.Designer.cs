@@ -31,6 +31,8 @@ namespace CoffeeShopC_I_S
         {
             this.exitBtnLf = new System.Windows.Forms.Button();
             this.menuHoldingPanel = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.totalLbl = new System.Windows.Forms.Label();
             this.totalTB = new System.Windows.Forms.TextBox();
             this.removeBtn = new System.Windows.Forms.Button();
@@ -43,7 +45,6 @@ namespace CoffeeShopC_I_S
             this.orderLB = new System.Windows.Forms.ListBox();
             this.pastOrdersBtn = new System.Windows.Forms.Button();
             this.ownerMenuBtn = new System.Windows.Forms.Button();
-            this.refreshButton = new System.Windows.Forms.Button();
             this.menuHoldingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@ namespace CoffeeShopC_I_S
             // menuHoldingPanel
             // 
             this.menuHoldingPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuHoldingPanel.Controls.Add(this.clearButton);
             this.menuHoldingPanel.Controls.Add(this.refreshButton);
             this.menuHoldingPanel.Controls.Add(this.totalLbl);
             this.menuHoldingPanel.Controls.Add(this.totalTB);
@@ -79,6 +81,32 @@ namespace CoffeeShopC_I_S
             this.menuHoldingPanel.Name = "menuHoldingPanel";
             this.menuHoldingPanel.Size = new System.Drawing.Size(511, 442);
             this.menuHoldingPanel.TabIndex = 8;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.Chocolate;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(14, 396);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(108, 43);
+            this.clearButton.TabIndex = 26;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.BackColor = System.Drawing.Color.Chocolate;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshButton.Location = new System.Drawing.Point(128, 396);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(139, 43);
+            this.refreshButton.TabIndex = 4;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // totalLbl
             // 
@@ -194,38 +222,26 @@ namespace CoffeeShopC_I_S
             this.pastOrdersBtn.BackColor = System.Drawing.Color.Chocolate;
             this.pastOrdersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pastOrdersBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pastOrdersBtn.Location = new System.Drawing.Point(12, 89);
+            this.pastOrdersBtn.Location = new System.Drawing.Point(12, 20);
             this.pastOrdersBtn.Name = "pastOrdersBtn";
             this.pastOrdersBtn.Size = new System.Drawing.Size(268, 43);
             this.pastOrdersBtn.TabIndex = 6;
             this.pastOrdersBtn.Text = "Past Orders";
             this.pastOrdersBtn.UseVisualStyleBackColor = false;
+            this.pastOrdersBtn.Click += new System.EventHandler(this.pastOrdersBtn_Click);
             // 
             // ownerMenuBtn
             // 
             this.ownerMenuBtn.BackColor = System.Drawing.Color.Chocolate;
             this.ownerMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ownerMenuBtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ownerMenuBtn.Location = new System.Drawing.Point(12, 20);
+            this.ownerMenuBtn.Location = new System.Drawing.Point(12, 83);
             this.ownerMenuBtn.Name = "ownerMenuBtn";
             this.ownerMenuBtn.Size = new System.Drawing.Size(268, 43);
             this.ownerMenuBtn.TabIndex = 7;
             this.ownerMenuBtn.Text = "Owner\'s Menu";
             this.ownerMenuBtn.UseVisualStyleBackColor = false;
             this.ownerMenuBtn.Click += new System.EventHandler(this.ownerMenuBtn_Click);
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.BackColor = System.Drawing.Color.Chocolate;
-            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshButton.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshButton.Location = new System.Drawing.Point(14, 396);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(134, 43);
-            this.refreshButton.TabIndex = 4;
-            this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = false;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // MenuForm
             // 
@@ -264,5 +280,6 @@ namespace CoffeeShopC_I_S
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Label totalLbl;
         private System.Windows.Forms.TextBox totalTB;
+        private System.Windows.Forms.Button clearButton;
     }
 }

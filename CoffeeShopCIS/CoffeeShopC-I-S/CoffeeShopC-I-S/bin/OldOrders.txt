@@ -1,0 +1,35 @@
+Order:
+Americano
+Total: $4.25
+
+Order:
+Espresso
+Total: $7.00
+
+Order:
+Black Coffee
+Total: $6.00
+
+Order:
+Black Coffee
+Cappuccino
+Total: $11.50
+
+Order:
+Espresso
+Total: $7.00
+
+Order:
+Americano
+Mocha
+Cappuccino
+Total: $15.00
+
+Order:
+Mocha
+Espresso
+Total: $12.25
+
+Order:
+Total: $
+

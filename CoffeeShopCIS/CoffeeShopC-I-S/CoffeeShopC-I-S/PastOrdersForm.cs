@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Auth: Logan Wright
+//Desc: Coffee Shop App past order form where users can se the discription of past orders
+// PastOrderForm, and products made by Logan Wright
+//Date:4/14/22
+
 namespace CoffeeShopC_I_S
 {
     public partial class PastOrdersForm : Form
@@ -15,23 +21,38 @@ namespace CoffeeShopC_I_S
         public PastOrdersForm()
         {
             InitializeComponent();
+            //this takes in the old orders that are saved and spits them into a list box for veiwing by the worker
+            try
+            {
+                //i'm doing using (StreamReader file = new StreamReader("../OldOrders.txt")) so it resolves and
+                //closes after it is done being used so i dont run into it trying to open more than once
+                using (StreamReader file = new StreamReader("../OldOrders.txt"))
+                    {
+                        int counter = 0;
+                        string line;
+                            while ((line = file.ReadLine()) != null)
+                            {
+                                receiptLB.Items.Add(line);
+                                counter++;
+                            }
+                    }
+            }
+            //catch just in case it trys to open a nonexestent file
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are no past orders to show.\n\n Error: " + ex.Message);
+            }
         }
 
         private void PastOrdersForm_Load(object sender, EventArgs e)
         {
-            //todo: Logan create Past Orders Form.
+
         }
 
         private void exitBtnRf_Click(object sender, EventArgs e)
         {
+           
             this.Close();
-        }
-
-        private void printBtn_Click(object sender, EventArgs e)
-        {
-            //Todo: logan create on show click, it should re route to reciept and populate the receipt list box with what ever selected items you selected.
-            //todo: so in turn that should populate the listbox with the items that were previously ordered, and should populate the receiptTotalTB with the total that it was
-            //todo: and then it would allow them to print their receipt if they changed their mind or something -Tyler.
         }
     }
 }

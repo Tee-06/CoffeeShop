@@ -86,6 +86,7 @@ namespace CoffeeShopC_I_S
             this.receiptPannel.Name = "receiptPannel";
             this.receiptPannel.Size = new System.Drawing.Size(352, 333);
             this.receiptPannel.TabIndex = 21;
+            this.receiptPannel.Paint += new System.Windows.Forms.PaintEventHandler(this.receiptPannel_Paint);
             // 
             // rCtotalLbl
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,31 @@ namespace CoffeeShopC_I_S
     public partial class MenuForm : Form
     {
         UsersDataContext productdb = new UsersDataContext();
-        public MenuForm()
+        public MenuForm(String role)
         {
             InitializeComponent();
+            //this if statement checks the role and moves buttons to invisabol if necisary - Logan
+            if (role == "Manager"|| role == "manager")
+            {
+                ownerMenuBtn.Hide();
+            }
+            else if (role == "Owner")
+            {
+                return;
+            }
+            else if (role == "Employee")
+            {
+                ownerMenuBtn.Hide();
+                pastOrdersBtn.Hide();
+            }
+            else if (role == "")
+            {
+                MessageBox.Show("How did you get here... You should of had a Role...");
+            }
+            else
+            {
+                MessageBox.Show("How did you get here... You should not be here please leave...");
+            }
         }
 
         //! -Tyler\/\/\/ 
@@ -148,7 +171,7 @@ namespace CoffeeShopC_I_S
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
-            //refreshes the listboxes with that information in the database -Logan
+            //refreshes the listboxes with that information in the database as well as clears the old order info-Logan
             menuLB.Items.Clear();
             priceLB.Items.Clear();
             //! for each product in product in database, on refresh it will fetch the products again and add them to correspoding LB's, will also round the price to nearest 2 decimal places -Tyler 
@@ -176,6 +199,25 @@ namespace CoffeeShopC_I_S
         // on Complete order button, list of strings and makes them equal to whats in the order listbox if they are type string, then adds to list -Tyler
         private void completeOrderBtn_Click(object sender, EventArgs e)
         {
+            //array to pust the completed order into a text file
+            try
+            {
+                using (TextWriter tw = File.AppendText("../OldOrders.txt"))
+                {
+                    tw.WriteLine("Order:");
+                    foreach (String s in orderLB.Items)
+                    {
+                        tw.WriteLine(s);
+                    }
+                    tw.WriteLine("Total: $" + totalTB.Text);
+                    tw.WriteLine("");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             //xtodo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
             //button leading to the recipt form -Tyler
             List<string> lst = orderLB.Items.OfType<String>().ToList();
@@ -185,6 +227,20 @@ namespace CoffeeShopC_I_S
             rf.ShowDialog();
             this.Show();
 
+        }
+
+        private void pastOrdersBtn_Click(object sender, EventArgs e)
+        {
+            //takes you to the past orders to view them
+            PastOrdersForm pof = new PastOrdersForm();
+            this.Hide();
+            pof.ShowDialog();
+            this.Show();
+        }
+        //clears the past order information
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            orderLB.Items.Clear();
         }
     }
 }
