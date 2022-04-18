@@ -155,12 +155,27 @@ namespace CoffeeShopC_I_S
                 priceLB.Items.Add("$" + Math.Round(product.ProductPrice, 2).ToString());
             }
         }
+        public string[] get()
+        {
+            string[] arr = new string[orderLB.Items.Count];
+            for (int i = 0; i < orderLB.Items.Count; i++)
+            {
+                arr[i] = orderLB.Items[i].ToString();
+            }
+            return arr;
+        }
 
         private void completeOrderBtn_Click(object sender, EventArgs e)
         {
             //todo: Make launch to receipt form and then they can either print *TextFile* or Exit their order
-            ReceiptForm rf = new ReceiptForm();
+            //button leading to the recipt form -Tyler
+            List<string> lst = orderLB.Items.OfType<String>().ToList();
+            ReceiptForm rf = new ReceiptForm(lst);
+            rf.recieptTotalTB.Text = totalTB.Text;
+            this.Hide();
             rf.ShowDialog();
+            this.Show();
+
         }
     }
 }
