@@ -35,9 +35,10 @@ namespace CoffeeShopC_I_S
             this.productsTableAdapter.Fill(this.coffeeShopdbDataSet1.Products);
 
         }
-        //! For Logan To Do:
+        //! For Logan To Do: -Tyler
         //todo: Add remove on click event for database.
         //xtodo: delete add button and just use save button for adding to database
+        //todo: Still gotta get rid of that nav bar if you aren't using it.
         //todo: Also delete top navigation bar for a more cleaner look.
        //todo: Check Receipt Form.cs *Code*
 
@@ -56,12 +57,12 @@ namespace CoffeeShopC_I_S
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            
+            //todo: Logan makes remove button onclick event that removes employee or manager or admin from database. -tyler
         }
 
         private void productsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //todo: Don't know what you're using this for logan -tyler
         }
     }
 }

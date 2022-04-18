@@ -85,7 +85,9 @@ namespace CoffeeShopC_I_S
             this.ClientSize = new System.Drawing.Size(383, 528);
             this.Controls.Add(this.receiptPannel);
             this.Controls.Add(this.exitBtnRf);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PastOrdersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PastOrdersForm";
             this.Load += new System.EventHandler(this.PastOrdersForm_Load);
             this.receiptPannel.ResumeLayout(false);

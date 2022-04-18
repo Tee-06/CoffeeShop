@@ -255,6 +255,7 @@ namespace CoffeeShopC_I_S
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.menuHoldingPanel.ResumeLayout(false);

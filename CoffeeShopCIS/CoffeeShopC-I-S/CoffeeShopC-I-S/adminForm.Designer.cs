@@ -137,7 +137,7 @@ namespace CoffeeShopC_I_S
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(39, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -335,7 +335,9 @@ namespace CoffeeShopC_I_S
             this.Controls.Add(this.usersTableDataGridView);
             this.Controls.Add(this.productsDataGridView);
             this.Controls.Add(this.productsBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminForm";
             this.Load += new System.EventHandler(this.adminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.coffeeShopdbDataSet1)).EndInit();
