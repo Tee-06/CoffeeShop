@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 
-//Auth: Logan Wright and Tyler Petersen
+//Auth: Tyler Petersen
+//Edit: Logan Wright
 //Desc: Coffee Shop App's Receipt Page that allows the user to print and view the completed orders information
 //Date:4/18/22
 
@@ -45,6 +46,7 @@ namespace CoffeeShopC_I_S
             pd.PrintPage += new PrintPageEventHandler(PrintImage);
             pd.Print();
         }
+        // method for getting the area of what to print - Tyler
         void PrintImage(object o, PrintPageEventArgs e)
         {
             int x = SystemInformation.WorkingArea.X;
@@ -54,6 +56,7 @@ namespace CoffeeShopC_I_S
 
             Rectangle bounds = new Rectangle(x, y, width, height);
 
+            // new bitmap named img equal to a new bitmap, width height
             Bitmap img = new Bitmap(width, height);
 
             this.DrawToBitmap(img, bounds);
@@ -63,7 +66,7 @@ namespace CoffeeShopC_I_S
 
         private void receiptPannel_Paint(object sender, PaintEventArgs e)
         {
-
+            //
         }
     }
 }
