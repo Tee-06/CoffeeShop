@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CoffeeShopC-I-S.exe" version="1.0.0.0" publicKeyToken="d9c44f59ce922107" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CoffeeShopC-I-S" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="CoffeeShopC-I-S.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoffeeShopC-I-S.exe" size="109016">
+      <assemblyIdentity name="CoffeeShopC-I-S" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3rG0xLJKgUoDTWdraU01xFiqfZeEygwYPI2gOHXrvBY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CoffeeShopC-I-S.exe.config" size="566">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Zbo8EsdIXj7cx9rc8XFGMvJwVVCWwBLd0uJlm5wzNRw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CoffeeShopdb.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YzT/rpdcf95kwc1yD/r0ZrzZubYGNzkNq2p6rCjR9Hg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CoffeeShopdb_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SRK67NLJgRE8bBk6/QudFORqwKIv4rpefVv7ZKr3Mlc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=TYLERS-DESKTOP\Tyler" issuerKeyHash="b6089153bd6aef179944b68fd09081893b73687c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>RiGufVFNrx9aEoi9u7czVbKqv/doYvFCD9bRf5Knacg=</DigestValue></Reference></SignedInfo><SignatureValue>kcgdtK1Tw8oR7d9BZHLeggVBDi+FXfT9df6ttMwKWXmM3XSClwrrhehjtA7jVihBIyIlfyHfHnLdJTuWbFEWGhRDtC+al8sMEV4sgfg//u6NN56J7uqk8wIGaLlcMOuw7Og58rReZptYTgZFqWS9NAy7mLvWrDsWcAG/bFD2u9k=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s+IAxINAGP+8TasD7xWZYQfWUXlIgCMp0rW54Kdeq4axJuy1mmjo8SLVi25cVrT12t8ItwC2tAYvqzLdaP8ybuoBx5QvNmiHQx2gqo90Q+lr1NGf2Lin/g9mgOgaIwMADqsIxparLXSLUl/AqbFG8kp9vs5gMCLj+6TRAVf4oeU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c869a7927fd1d60f42f16268f7bfaab25533b7bbbd88125a1faf4d517dae2146" Description="" Url=""><as:assemblyIdentity name="CoffeeShopC-I-S.exe" version="1.0.0.0" publicKeyToken="d9c44f59ce922107" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TYLERS-DESKTOP\Tyler</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KOvo/UqgfmdMCus8eEoTzW1yLSgGjGlpcscoxZDjcoU=</DigestValue></Reference></SignedInfo><SignatureValue>qHdtikwASiNFgkI8LdPzMPcce5QsZ+r3Ek8gLN1o1rWNw7SzGuJnl/kEsBC0cH+v6qFXZ3ScXwq6vuQgijU+7kW+IijyJeaVQ/FjD+JGHi1CuNoG87JNeutNLV+KkibblmW4VIRqyJe2AcKr/m2DMdMG6/x+4arJ1ulmU/N4J5E=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s+IAxINAGP+8TasD7xWZYQfWUXlIgCMp0rW54Kdeq4axJuy1mmjo8SLVi25cVrT12t8ItwC2tAYvqzLdaP8ybuoBx5QvNmiHQx2gqo90Q+lr1NGf2Lin/g9mgOgaIwMADqsIxparLXSLUl/AqbFG8kp9vs5gMCLj+6TRAVf4oeU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQF60HXnbycY9N5zYm49tvXzANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigAVABZAEwARQBSAFMALQBEAEUAUwBLAFQATwBQAFwAVAB5AGwAZQByMB4XDTIyMDQxOTAzMzY1OFoXDTIzMDQxOTA5MzY1OFowMzExMC8GA1UEAx4oAFQAWQBMAEUAUgBTAC0ARABFAFMASwBUAE8AUABcAFQAeQBsAGUAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAs+IAxINAGP+8TasD7xWZYQfWUXlIgCMp0rW54Kdeq4axJuy1mmjo8SLVi25cVrT12t8ItwC2tAYvqzLdaP8ybuoBx5QvNmiHQx2gqo90Q+lr1NGf2Lin/g9mgOgaIwMADqsIxparLXSLUl/AqbFG8kp9vs5gMCLj+6TRAVf4oeUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBcqFjXLze5KhMlo9LwadtEYvE5t22suWrBgTZlGuC5712illko8N6tHnU9maDR0n5AQ7/ejEZVY99jloLfL6h5jX2lBwxToH4J/7AEwO79bgio1oHZskdFH36IV2sFMkclqjDi35+LDhPdbQ7FWSpZryhippEgCo+eTCrOoUAQTA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
