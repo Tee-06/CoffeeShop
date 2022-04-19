@@ -1,0 +1,5 @@
+Order:
+Espresso
+Mocha
+Total: $12.25
+
