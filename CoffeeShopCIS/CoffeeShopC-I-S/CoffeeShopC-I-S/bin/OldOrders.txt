@@ -43,3 +43,7 @@ Order:
 Espresso
 Total: $7.00
 
+Order:
+Americano
+Total: $4.25
+

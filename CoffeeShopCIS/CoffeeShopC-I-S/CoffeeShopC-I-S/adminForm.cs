@@ -40,7 +40,6 @@ namespace CoffeeShopC_I_S
         //xtodo: delete add button and just use save button for adding to database
         //todo: Still gotta get rid of that nav bar if you aren't using it.
         //todo: Also delete top navigation bar for a more cleaner look.
-       //todo: Check Receipt Form.cs *Code*
 
         private void saveButton_Click(object sender, EventArgs e)
         {

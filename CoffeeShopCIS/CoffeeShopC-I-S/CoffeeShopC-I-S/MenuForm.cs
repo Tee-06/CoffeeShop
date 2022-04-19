@@ -65,7 +65,6 @@ namespace CoffeeShopC_I_S
         }
 
         // ! on the add order button click, the selected item in the menu list box gets added to the order listbox
-        // todo: Add in the Qty picker and the price into a seperate textbox, or label for the overall price of the order.
         //! Add to orderLB, adds the menu selected item to the order LB - Tyler
         private void addToOrderBtn_Click(object sender, EventArgs e)
         {
