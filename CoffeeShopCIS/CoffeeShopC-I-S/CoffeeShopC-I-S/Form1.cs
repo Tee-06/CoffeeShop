@@ -29,7 +29,7 @@ namespace CoffeeShopC_I_S
             
             if (IsValidUser(usernameTB.Text, passwordTB.Text, roleComboBox.Text.ToString()))
             {
-                MenuForm menu = new MenuForm(roleComboBox.Text + ""); // sends the role to be validated so the user gets the correct permishions
+                MenuForm menu = new MenuForm(roleComboBox.Text + ""); // Logan: sends the role to be validated so the user gets the correct permishions
                 this.Hide();
                 menu.ShowDialog();
                 this.Show();

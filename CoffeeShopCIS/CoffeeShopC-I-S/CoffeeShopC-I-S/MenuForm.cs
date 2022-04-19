@@ -107,7 +107,7 @@ namespace CoffeeShopC_I_S
             }
 
         }
-        //! on remove click, runs a try catch, first it tries if there is no selected item then it prompts user to select an item to remove.
+        //! on remove click, runs a try catch, first it tries if there is no selected item then it prompts user to select an item to remove. - Tyler
         private void removeBtn_Click(object sender, EventArgs e)
         {
             try
@@ -126,7 +126,6 @@ namespace CoffeeShopC_I_S
                         {
                             orderLB.Items.Remove(orderLB.SelectedItem.ToString());
                         }
-                        // !Dont think this actually works. So something needs to be selected
                         else if (menuLB.SelectedItem.ToString() == null)
                         {
                             MessageBox.Show("Please Select An Item To Remove.");
@@ -170,7 +169,7 @@ namespace CoffeeShopC_I_S
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
-            //refreshes the listboxes with that information in the database as well as clears the old order info-Logan
+            //refreshes the listboxes with that information in the database as well as clears the old order info -Logan
             menuLB.Items.Clear();
             priceLB.Items.Clear();
             //! for each product in product in database, on refresh it will fetch the products again and add them to correspoding LB's, will also round the price to nearest 2 decimal places -Tyler 
@@ -181,6 +180,7 @@ namespace CoffeeShopC_I_S
             }
         }
 
+        //Left chunk to ask if i was pasiing it into an array correctly @Westen
 
         //! Was going to add the listbox items into an array and pass them over but the list was easier and seemed more efficient. - Tyler
         /* public string[] get()
@@ -198,7 +198,7 @@ namespace CoffeeShopC_I_S
         // on Complete order button, list of strings and makes them equal to whats in the order listbox if they are type string, then adds to list -Tyler
         private void completeOrderBtn_Click(object sender, EventArgs e)
         {
-            //array to pust the completed order into a text file
+            //array to pust the completed order into a text file - Logan lines 202-218
             try
             {
                 using (TextWriter tw = File.AppendText("../OldOrders.txt"))
@@ -230,13 +230,13 @@ namespace CoffeeShopC_I_S
 
         private void pastOrdersBtn_Click(object sender, EventArgs e)
         {
-            //takes you to the past orders to view them
+            //takes you to the past orders to view them - Logan
             PastOrdersForm pof = new PastOrdersForm();
             this.Hide();
             pof.ShowDialog();
             this.Show();
         }
-        //clears the past order information
+        //clears the past order information - Logan
         private void clearButton_Click(object sender, EventArgs e)
         {
             orderLB.Items.Clear();

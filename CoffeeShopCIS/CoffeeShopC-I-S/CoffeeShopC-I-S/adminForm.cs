@@ -36,14 +36,14 @@ namespace CoffeeShopC_I_S
 
         }
         //! For Logan To Do: -Tyler
-        //todo: Add remove on click event for database.
+        //todo: Add remove on click event for database. - Logan: could nor find how to remove it using a button
         //xtodo: delete add button and just use save button for adding to database
-        //todo: Still gotta get rid of that nav bar if you aren't using it.
-        //todo: Also delete top navigation bar for a more cleaner look.
+        //todo: Still gotta get rid of that nav bar if you aren't using it. - Logan: Necicary to delete stuff so can not do so
+        //todo: Also delete top navigation bar for a more cleaner look. - Logan: decised to use nav bar
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            //todo: Add or make function for saving to the database, and not the instance so on re load of program it is saved to database.
+            //todo: Add or make function for saving to the database, and not the instance so on re load of program it is saved to database. - Logan: Could not remember how to do so and could not find it in slides and book
             this.Validate();
             this.productsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.coffeeShopdbDataSet1);
@@ -54,14 +54,13 @@ namespace CoffeeShopC_I_S
             this.Close();
         }
 
-        private void removeButton_Click(object sender, EventArgs e)
+        /* Could not get it to work correctly see above
+         * private void removeButton_Click(object sender, EventArgs e)
         {
             //todo: Logan makes remove button onclick event that removes employee or manager or admin from database. -tyler
         }
+        */
 
-        private void productsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //todo: Don't know what you're using this for logan -tyler
-        }
+        
     }
 }

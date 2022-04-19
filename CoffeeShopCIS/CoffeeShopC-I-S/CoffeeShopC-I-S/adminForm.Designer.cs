@@ -232,7 +232,6 @@ namespace CoffeeShopC_I_S
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.Size = new System.Drawing.Size(344, 266);
             this.productsDataGridView.TabIndex = 1;
-            this.productsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
